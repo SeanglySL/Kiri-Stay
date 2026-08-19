@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Kiri Stay</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/index.html" class="brand">Kiri <span>Stay</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="/rooms.html" data-i18n="nav.rooms">Rooms</a></li>
+      <li><a href="/about.html" class="active" data-i18n="nav.about">About</a></li>
+      <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul></nav>
+    <div class="nav-auth">
+      <a href="/login.html" class="btn btn-outline btn-sm" data-auth="guest">Log in</a>
+      <a href="/register.html" class="btn btn-brass btn-sm" data-auth="guest">Register</a>
+      <a href="#" data-dashboard-link class="btn btn-outline btn-sm" data-auth="user" data-i18n="auth.dashboard">Dashboard</a>
+      <a href="#" data-action="logout" class="btn btn-brass btn-sm" data-auth="user" data-i18n="auth.logout">Log out</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container grid-2">
+    <div id="about-text">
+      <span class="eyebrow" id="about-eyebrow"></span>
+      <h1 id="about-heading"></h1>
+      <div id="about-paragraphs"></div>
+    </div>
+    <div class="panel">
+      <h3 class="mt-0" id="about-glance-heading"></h3>
+      <ul style="padding-left:18px; color:var(--ink-soft);" id="about-glance-list"></ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="brand" style="color:var(--ivory)">Kiri <span>Stay</span></div>
+      <p id="footer-tagline" style="max-width:260px;color:rgba(250,247,241,0.55);margin-top:10px;">A small hotel, honestly run.</p>
+    </div>
+    <div class="foot-cols">
+      <div><h4 data-i18n="footer.explore">Explore</h4><ul><li><a href="/rooms.html" data-i18n="nav.rooms">Rooms</a></li><li><a href="/about.html" data-i18n="nav.about">About</a></li><li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li></ul></div>
+      <div><h4 data-i18n="footer.account">Account</h4><ul><li><a href="/login.html" data-i18n="auth.login">Log in</a></li><li><a href="/register.html" data-i18n="auth.register">Register</a></li></ul></div>
+    </div>
+  </div>
+  <div class="foot-bottom container">© 2026 Kiri Stay. Seangly capstone project WCT.</div>
+</footer>
+
+<script src="/js/app.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/about.js"></script>
+</body>
+</html>

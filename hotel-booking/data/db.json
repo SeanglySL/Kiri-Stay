@@ -1,0 +1,1731 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Hotel Admin",
+      "email": "admin@kiristay.com",
+      "passwordHash": "0220d85f441bfec5f475935b3a4fe637adfc65ac5e368479551cc58267ee79c0519ea5b3b0e4149a4ffdd0aef0a9b5b2b76b8713447f83d9880de52a02cca825",
+      "salt": "486b067dcfe4fedc26ed70164acd146c",
+      "role": "admin",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Seangly",
+      "email": "slseangly01@gmail.com",
+      "passwordHash": "0d406ffcad93181eb0bf54229f518982380377bcd6dd6e165ed20ef3ad45234e096fb9f0793557930112523e7414f754a9f43963c11019705970adf6cb7643f0",
+      "salt": "e0ccb8817e672afbdac6a609de0a376d",
+      "role": "customer",
+      "createdAt": "2026-08-08T15:38:33.174Z"
+    },
+    {
+      "id": 3,
+      "name": "SL",
+      "email": "slseangly0@gmail.com",
+      "passwordHash": "0b1780647e8108b5fbe4a714fb08ecbd1dd413da19199223cd93dcd7ed631e868aa8beb32352494edd44320ac359d537f009e845edbcae6fb9af67ae2bd6cd0f",
+      "salt": "ba3c79bf13882c6d4f50ea5398d1c040",
+      "role": "customer",
+      "createdAt": "2026-08-08T15:40:01.232Z"
+    },
+    {
+      "id": 4,
+      "name": "aa",
+      "email": "AhPoy@gamil.com",
+      "passwordHash": "29ebccb42c670eaec75f420298e907b74bfdb0d61f23674791f7928fd8165074784399eb6a4037adf13a98e8985514e2dc5799422b05f68bbea00ac1cfe43a7b",
+      "salt": "41f004720d07d2e9203262207eeeef19",
+      "role": "customer",
+      "createdAt": "2026-08-08T15:43:04.778Z"
+    },
+    {
+      "id": 5,
+      "name": "Ah Smos",
+      "email": "AhSmos@gamil.com",
+      "passwordHash": "2060fc6ebbcb79444d1f12ed00add98dc5f22b6567068454e1da2a64a4415b5ecd087a8814b5413351a84d230028144f4a1e87c401e9f9b06259e52a5a7e0878",
+      "salt": "7faab40c649072d9a9bc76b457a46a97",
+      "role": "customer",
+      "createdAt": "2026-08-09T03:15:45.183Z"
+    },
+    {
+      "id": 6,
+      "name": "Koko",
+      "email": "AhSddmos@gamil.com",
+      "passwordHash": "ce789d0558b88e9b58c7a08c3239e80e2bea760bf325e16aab480c52ca4689b7292478bb9d3d5072f27e50aea6b546363cc09ac8025e5ac5882dc9b4d89bb271",
+      "salt": "e8620b53b0ebafb5f90f0a618de5c044",
+      "role": "customer",
+      "createdAt": "2026-08-14T10:04:49.554Z"
+    },
+    {
+      "id": 7,
+      "name": "SEANGLY SL",
+      "email": "Ah2Poy@gamil.com",
+      "passwordHash": "ded76d6556214ee82c5daede86caeaa11ba5390c714450a6985450586bee9124759014b9ce5e3710d74fc8891d88ab4fb2d700dc42f803697a602bf9fadaaa45",
+      "salt": "8b14aa0b1085cbaf03b42d28700de73c",
+      "role": "customer",
+      "createdAt": "2026-08-17T16:15:21.259Z"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Garden Single",
+      "floor": 1,
+      "pricePerNight": 45,
+      "capacity": 1,
+      "type": {
+        "en": "Single",
+        "km": "តែមួយ",
+        "zh": "单人间"
+      },
+      "description": {
+        "en": "A calm, sun-lit room with one bed — perfect for the solo traveller.",
+        "km": "បន្ទប់ស្ងប់ស្ងាត់ មានពន្លឺថ្ងៃភ្លឺស្វាង មានគ្រែមួយ — សមស្របសម្រាប់អ្នកធ្វើដំណើរតែម្នាក់ឯង។",
+        "zh": "宁静采光良好的客房，配有一张床——非常适合独自旅行的客人。"
+      },
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Work desk, Breakfast included",
+        "km": "វិហ្វីឥតគិតថ្លៃ, ម៉ាស៊ីនត្រជាក់, តុធ្វើការ, រួមអាហារពេលព្រឹក",
+        "zh": "免费WiFi, 空调, 办公桌, 含早餐"
+      },
+      "image": "/images/1787145230532-7c1951389c.jpg",
+      "gallery": [
+        "/images/1787145230532-7c1951389c.jpg",
+        "https://images.unsplash.com/photo-1744534637336-6110864236fc?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519219788971-8d9797e0928e?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516381763478-fa82c946f04f?w=1000&q=80&auto=format&fit=crop"
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Harbor Double",
+      "floor": 2,
+      "pricePerNight": 72,
+      "capacity": 2,
+      "type": {
+        "en": "Double",
+        "km": "ពីរនាក់",
+        "zh": "双人间"
+      },
+      "description": {
+        "en": "Two beds and a bright window — spacious enough for friends or a couple.",
+        "km": "គ្រែពីរ និងបង្អួចភ្លឺស្វាង — ធំល្មមសម្រាប់មិត្តភក្តិ ឬគូស្នេហ៍។",
+        "zh": "两张床，明亮的窗户——空间足够朋友或情侣入住。"
+      },
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Mini fridge, Breakfast included",
+        "km": "វិហ្វីឥតគិតថ្លៃ, ម៉ាស៊ីនត្រជាក់, ទូទឹកកកតូច, រួមអាហារពេលព្រឹក",
+        "zh": "免费WiFi, 空调, 小冰箱, 含早餐"
+      },
+      "image": "https://images.unsplash.com/photo-1642399179458-c11c50e3ce1d?w=900&q=80&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1642399179458-c11c50e3ce1d?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519219788971-8d9797e0928e?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516381763478-fa82c946f04f?w=1000&q=80&auto=format&fit=crop"
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Executive Suite",
+      "floor": 3,
+      "pricePerNight": 145,
+      "capacity": 3,
+      "type": {
+        "en": "Suite",
+        "km": "ស៊ុយត៍",
+        "zh": "套房"
+      },
+      "description": {
+        "en": "A separate sitting area and a king bed, built for longer stays.",
+        "km": "ផ្នែកអង្គុយដាច់ដោយឡែក និងគ្រែធំ សាងសង់ឡើងសម្រាប់ការស្នាក់នៅរយៈពេលវែង។",
+        "zh": "独立起居区与特大号床，专为长住宾客设计。"
+      },
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Living area, Mini bar, Breakfast included, Late checkout",
+        "km": "វិហ្វីឥតគិតថ្លៃ, ម៉ាស៊ីនត្រជាក់, ផ្នែកអង្គុយលេង, បារតូច, រួមអាហារពេលព្រឹក, ចេញយឺត",
+        "zh": "免费WiFi, 空调, 起居区, 迷你吧, 含早餐, 延迟退房"
+      },
+      "image": "https://images.unsplash.com/photo-1664227430717-9a62112984cf?w=900&q=80&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1664227430717-9a62112984cf?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519219788971-8d9797e0928e?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516381763478-fa82c946f04f?w=1000&q=80&auto=format&fit=crop"
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Family Deluxe",
+      "floor": 4,
+      "pricePerNight": 98,
+      "capacity": 4,
+      "type": {
+        "en": "Family",
+        "km": "គ្រួសារ",
+        "zh": "家庭房"
+      },
+      "description": {
+        "en": "Multiple beds and extra floor space, built for families travelling together.",
+        "km": "គ្រែច្រើន និងកន្លែងទំនេរបន្ថែម សាងសង់ឡើងសម្រាប់គ្រួសារធ្វើដំណើរជាមួយគ្នា។",
+        "zh": "多张床与充裕空间，专为结伴出行的家庭设计。"
+      },
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Extra beds, Breakfast included",
+        "km": "វិហ្វីឥតគិតថ្លៃ, ម៉ាស៊ីនត្រជាក់, គ្រែបន្ថែម, រួមអាហារពេលព្រឹក",
+        "zh": "免费WiFi, 空调, 加床, 含早餐"
+      },
+      "image": "https://images.unsplash.com/photo-1723258343563-7d71a55d6dfa?w=900&q=80&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1723258343563-7d71a55d6dfa?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519219788971-8d9797e0928e?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516381763478-fa82c946f04f?w=1000&q=80&auto=format&fit=crop"
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "301",
+      "type": {
+        "en": "Single Bad",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "b",
+        "km": "b",
+        "zh": "b"
+      },
+      "pricePerNight": 79,
+      "capacity": 3,
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Extra beds, Breakfast included",
+        "km": "c",
+        "zh": "c"
+      },
+      "image": "/images/1786214176775-069baad79a.jpg",
+      "gallery": [
+        "/images/1786214176775-069baad79a.jpg"
+      ],
+      "floor": 3,
+      "createdAt": "2026-08-08T18:36:16.787Z"
+    },
+    {
+      "id": 6,
+      "name": "303",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 169,
+      "capacity": 4,
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Extra beds, Breakfast included",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786215061250-e67171633b.jpg",
+      "gallery": [
+        "/images/1786215061250-e67171633b.jpg"
+      ],
+      "floor": 3,
+      "createdAt": "2026-08-08T18:51:01.259Z"
+    },
+    {
+      "id": 7,
+      "name": "501",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 109,
+      "capacity": 6,
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Extra beds, Breakfast included",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786215448164-719f18dab4.jpg",
+      "gallery": [
+        "/images/1786215448164-719f18dab4.jpg"
+      ],
+      "floor": 5,
+      "createdAt": "2026-08-08T18:57:28.174Z"
+    },
+    {
+      "id": 8,
+      "name": "502",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "a",
+        "km": "a",
+        "zh": ""
+      },
+      "pricePerNight": 169,
+      "capacity": 7,
+      "amenities": {
+        "en": "b",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786215856986-350df2ca02.jpg",
+      "gallery": [
+        "/images/1786215856986-350df2ca02.jpg"
+      ],
+      "floor": 5,
+      "createdAt": "2026-08-08T19:04:16.993Z"
+    },
+    {
+      "id": 9,
+      "name": "503",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "a",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 149,
+      "capacity": 4,
+      "amenities": {
+        "en": "b",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786215947709-631dae105e.jpg",
+      "gallery": [
+        "/images/1786215947709-631dae105e.jpg"
+      ],
+      "floor": 5,
+      "createdAt": "2026-08-08T19:05:47.722Z"
+    },
+    {
+      "id": 10,
+      "name": "402",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "Free WiFi,\nAir conditioning,\nExtra beds,\nBreakfast included",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 109,
+      "capacity": 6,
+      "amenities": {
+        "en": "a",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786245551962-d7be35117c.jpg",
+      "gallery": [
+        "/images/1786245551962-d7be35117c.jpg"
+      ],
+      "floor": 4,
+      "createdAt": "2026-08-09T03:19:11.976Z"
+    },
+    {
+      "id": 11,
+      "name": "101",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "a",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 77,
+      "capacity": 2,
+      "amenities": {
+        "en": "a",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246074810-6a3e89fbb4.jpg",
+      "gallery": [
+        "/images/1786246074810-6a3e89fbb4.jpg"
+      ],
+      "floor": 1,
+      "createdAt": "2026-08-09T03:27:54.821Z"
+    },
+    {
+      "id": 12,
+      "name": "201",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 77,
+      "capacity": 2,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246110415-dfcd7825bb.jpg",
+      "gallery": [
+        "/images/1786246110415-dfcd7825bb.jpg"
+      ],
+      "floor": 2,
+      "createdAt": "2026-08-09T03:28:30.426Z"
+    },
+    {
+      "id": 13,
+      "name": "302",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "a",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 77,
+      "capacity": 2,
+      "amenities": {
+        "en": "b",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246154645-b45c5464ef.jpg",
+      "gallery": [
+        "/images/1786246154645-b45c5464ef.jpg"
+      ],
+      "floor": 3,
+      "createdAt": "2026-08-09T03:29:14.654Z"
+    },
+    {
+      "id": 14,
+      "name": "403",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "a",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 77,
+      "capacity": 2,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246204478-6693b7de2b.jpg",
+      "gallery": [
+        "/images/1786246204478-6693b7de2b.jpg"
+      ],
+      "floor": 4,
+      "createdAt": "2026-08-09T03:30:04.489Z"
+    },
+    {
+      "id": 15,
+      "name": "504",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 79,
+      "capacity": 2,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246279488-e884602d32.jpg",
+      "gallery": [
+        "/images/1786246279488-e884602d32.jpg"
+      ],
+      "floor": 5,
+      "createdAt": "2026-08-09T03:31:19.498Z"
+    },
+    {
+      "id": 16,
+      "name": "505",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 99,
+      "capacity": 2,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246522652-2783fd519d.jpg",
+      "gallery": [
+        "/images/1786246522652-2783fd519d.jpg"
+      ],
+      "floor": 5,
+      "createdAt": "2026-08-09T03:35:22.662Z"
+    },
+    {
+      "id": 17,
+      "name": "404",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 99,
+      "capacity": 2,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246568524-2b9b6c45f9.jpg",
+      "gallery": [
+        "/images/1786246568524-2b9b6c45f9.jpg"
+      ],
+      "floor": 4,
+      "createdAt": "2026-08-09T03:36:08.534Z"
+    },
+    {
+      "id": 18,
+      "name": "203",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 99,
+      "capacity": 2,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246617853-148ed55ff7.jpg",
+      "gallery": [
+        "/images/1786246617853-148ed55ff7.jpg"
+      ],
+      "floor": 2,
+      "createdAt": "2026-08-09T03:36:57.868Z"
+    },
+    {
+      "id": 19,
+      "name": "102",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 99,
+      "capacity": 2,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246664246-4ea93537b2.jpg",
+      "gallery": [
+        "/images/1786246664246-4ea93537b2.jpg"
+      ],
+      "floor": 1,
+      "createdAt": "2026-08-09T03:37:44.257Z"
+    },
+    {
+      "id": 20,
+      "name": "405",
+      "type": {
+        "en": "Double bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 169,
+      "capacity": 4,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246752472-5a2199a967.jpg",
+      "gallery": [
+        "/images/1786246752472-5a2199a967.jpg"
+      ],
+      "floor": 4,
+      "createdAt": "2026-08-09T03:39:12.482Z"
+    },
+    {
+      "id": 21,
+      "name": "204",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 169,
+      "capacity": 4,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246936424-f2c2283726.jpg",
+      "gallery": [
+        "/images/1786246936424-f2c2283726.jpg"
+      ],
+      "floor": 2,
+      "createdAt": "2026-08-09T03:42:16.437Z"
+    },
+    {
+      "id": 22,
+      "name": "103",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 169,
+      "capacity": 4,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786246975853-da38ebeb8d.jpg",
+      "gallery": [
+        "/images/1786246975853-da38ebeb8d.jpg"
+      ],
+      "floor": 1,
+      "createdAt": "2026-08-09T03:42:55.867Z"
+    },
+    {
+      "id": 23,
+      "name": "506",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 249,
+      "capacity": 5,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786247217571-28d90d9c5c.jpg",
+      "gallery": [
+        "/images/1786247217571-28d90d9c5c.jpg"
+      ],
+      "floor": 5,
+      "createdAt": "2026-08-09T03:46:57.581Z"
+    },
+    {
+      "id": 24,
+      "name": "406",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 249,
+      "capacity": 5,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786247275149-3df83759cc.jpg",
+      "gallery": [
+        "/images/1786247275149-3df83759cc.jpg"
+      ],
+      "floor": 4,
+      "createdAt": "2026-08-09T03:47:55.157Z"
+    },
+    {
+      "id": 25,
+      "name": "304",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 249,
+      "capacity": 5,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786247348643-fc5dd718f5.jpg",
+      "gallery": [
+        "/images/1786247348643-fc5dd718f5.jpg"
+      ],
+      "floor": 3,
+      "createdAt": "2026-08-09T03:49:08.652Z"
+    },
+    {
+      "id": 26,
+      "name": "205",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 249,
+      "capacity": 5,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786247393037-6b1829e198.jpg",
+      "gallery": [
+        "/images/1786247393037-6b1829e198.jpg"
+      ],
+      "floor": 2,
+      "createdAt": "2026-08-09T03:49:53.051Z"
+    },
+    {
+      "id": 27,
+      "name": "104",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 249,
+      "capacity": 5,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786247436593-24e2221567.jpg",
+      "gallery": [
+        "/images/1786247436593-24e2221567.jpg"
+      ],
+      "floor": 1,
+      "createdAt": "2026-08-09T03:50:36.603Z"
+    },
+    {
+      "id": 28,
+      "name": "305",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 149,
+      "capacity": 4,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786275337770-680a913908.jpg",
+      "gallery": [
+        "/images/1786275337770-680a913908.jpg"
+      ],
+      "floor": 1,
+      "createdAt": "2026-08-09T11:35:37.786Z"
+    },
+    {
+      "id": 29,
+      "name": "206",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 149,
+      "capacity": 4,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786275386513-a742f7d403.jpg",
+      "gallery": [
+        "/images/1786275386513-a742f7d403.jpg"
+      ],
+      "floor": 2,
+      "createdAt": "2026-08-09T11:36:26.526Z"
+    },
+    {
+      "id": 30,
+      "name": "105",
+      "type": {
+        "en": "Double Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 149,
+      "capacity": 4,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786275443592-16f1f5160f.jpg",
+      "gallery": [
+        "/images/1786275443592-16f1f5160f.jpg"
+      ],
+      "floor": 1,
+      "createdAt": "2026-08-09T11:37:23.606Z"
+    },
+    {
+      "id": 31,
+      "name": "507",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 99,
+      "capacity": 3,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786275750320-e39b694fa2.jpg",
+      "gallery": [
+        "/images/1786275750320-e39b694fa2.jpg"
+      ],
+      "floor": 5,
+      "createdAt": "2026-08-09T11:42:30.333Z"
+    },
+    {
+      "id": 32,
+      "name": "407",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 99,
+      "capacity": 3,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786275852366-270c9bc7ea.jpg",
+      "gallery": [
+        "/images/1786275852366-270c9bc7ea.jpg"
+      ],
+      "floor": 4,
+      "createdAt": "2026-08-09T11:44:12.378Z"
+    },
+    {
+      "id": 33,
+      "name": "305",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 99,
+      "capacity": 3,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786275901013-2b62b8827d.jpg",
+      "gallery": [
+        "/images/1786275901013-2b62b8827d.jpg"
+      ],
+      "floor": 3,
+      "createdAt": "2026-08-09T11:45:01.026Z"
+    },
+    {
+      "id": 34,
+      "name": "207",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 99,
+      "capacity": 3,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786275944376-3230256bfa.jpg",
+      "gallery": [
+        "/images/1786275944376-3230256bfa.jpg"
+      ],
+      "floor": 2,
+      "createdAt": "2026-08-09T11:45:44.388Z"
+    },
+    {
+      "id": 35,
+      "name": "106",
+      "type": {
+        "en": "Single Bed",
+        "km": "",
+        "zh": ""
+      },
+      "description": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "pricePerNight": 99,
+      "capacity": 3,
+      "amenities": {
+        "en": "",
+        "km": "",
+        "zh": ""
+      },
+      "image": "/images/1786275991083-970fd05b54.jpg",
+      "gallery": [
+        "/images/1786275991083-970fd05b54.jpg"
+      ],
+      "floor": 1,
+      "createdAt": "2026-08-09T11:46:31.095Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "userId": 2,
+      "roomId": 1,
+      "guestName": "Seangly",
+      "guestEmail": "slseangly01@gmail.com",
+      "dates": [
+        "2026-08-24"
+      ],
+      "guests": 1,
+      "nights": 1,
+      "totalPrice": 45,
+      "depositAmount": 27,
+      "balanceAmount": 18,
+      "depositPaid": true,
+      "status": "cancelled",
+      "seenByAdmin": true,
+      "balancePaid": false,
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "cancelledAt": "2026-08-09T11:52:46.441Z",
+      "checkInCode": "KS-CFAD14",
+      "createdAt": "2026-08-08T15:39:08.902Z"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "roomId": 2,
+      "guestName": "SL",
+      "guestEmail": "slseangly0@gmail.com",
+      "dates": [
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-30"
+      ],
+      "guests": 2,
+      "nights": 4,
+      "totalPrice": 288,
+      "depositAmount": 172.8,
+      "balanceAmount": 115.2,
+      "depositPaid": true,
+      "status": "checked-in",
+      "seenByAdmin": true,
+      "balancePaid": true,
+      "checkedInAt": "2026-08-08T15:40:50.913Z",
+      "checkedOutAt": null,
+      "cancelledAt": null,
+      "checkInCode": "KS-B8F447",
+      "createdAt": "2026-08-08T15:40:22.236Z"
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "roomId": 2,
+      "guestName": "aa",
+      "guestEmail": "AhPoy@gamil.com",
+      "dates": [
+        "2026-08-25"
+      ],
+      "guests": 2,
+      "nights": 1,
+      "totalPrice": 72,
+      "depositAmount": 43.2,
+      "balanceAmount": 28.8,
+      "depositPaid": true,
+      "status": "confirmed",
+      "seenByAdmin": true,
+      "balancePaid": false,
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "cancelledAt": null,
+      "checkInCode": "KS-A1EBF0",
+      "createdAt": "2026-08-08T15:43:14.382Z"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "roomId": 4,
+      "guestName": "aa",
+      "guestEmail": "AhPoy@gamil.com",
+      "dates": [
+        "2026-08-24"
+      ],
+      "guests": 4,
+      "nights": 1,
+      "totalPrice": 98,
+      "depositAmount": 58.8,
+      "balanceAmount": 39.2,
+      "depositPaid": true,
+      "status": "checked-out",
+      "seenByAdmin": true,
+      "balancePaid": true,
+      "checkedInAt": "2026-08-09T11:32:48.621Z",
+      "checkedOutAt": "2026-08-09T11:54:55.950Z",
+      "cancelledAt": null,
+      "checkInCode": "KS-D7C5A2",
+      "createdAt": "2026-08-08T15:45:52.562Z"
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "roomId": 5,
+      "guestName": "Ah Smos",
+      "guestEmail": "AhSmos@gamil.com",
+      "dates": [
+        "2026-08-09"
+      ],
+      "guests": 3,
+      "nights": 1,
+      "totalPrice": 79,
+      "depositAmount": 47.4,
+      "balanceAmount": 31.6,
+      "depositPaid": true,
+      "status": "confirmed",
+      "seenByAdmin": true,
+      "balancePaid": false,
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "cancelledAt": null,
+      "checkInCode": "KS-2EF306",
+      "createdAt": "2026-08-09T03:16:06.955Z"
+    },
+    {
+      "id": 6,
+      "userId": 5,
+      "roomId": 27,
+      "guestName": "Ah Smos",
+      "guestEmail": "AhSmos@gamil.com",
+      "dates": [
+        "2026-08-18"
+      ],
+      "guests": 5,
+      "nights": 1,
+      "totalPrice": 249,
+      "depositAmount": 149.4,
+      "balanceAmount": 99.6,
+      "depositPaid": true,
+      "status": "confirmed",
+      "seenByAdmin": true,
+      "balancePaid": false,
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "cancelledAt": null,
+      "checkInCode": "KS-FAD934",
+      "createdAt": "2026-08-09T03:57:19.655Z"
+    },
+    {
+      "id": 7,
+      "userId": 5,
+      "roomId": 9,
+      "guestName": "Ah Smos",
+      "guestEmail": "AhSmos@gamil.com",
+      "dates": [
+        "2026-08-19",
+        "2026-09-18"
+      ],
+      "guests": 4,
+      "nights": 2,
+      "totalPrice": 298,
+      "depositAmount": 178.8,
+      "balanceAmount": 119.2,
+      "depositPaid": true,
+      "status": "confirmed",
+      "seenByAdmin": true,
+      "balancePaid": false,
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "cancelledAt": null,
+      "checkInCode": "KS-267A9C",
+      "createdAt": "2026-08-09T03:59:04.719Z"
+    },
+    {
+      "id": 8,
+      "userId": 5,
+      "roomId": 5,
+      "guestName": "Ah Smos",
+      "guestEmail": "AhSmos@gamil.com",
+      "dates": [
+        "2026-08-19"
+      ],
+      "guests": 3,
+      "nights": 1,
+      "totalPrice": 79,
+      "depositAmount": 47.4,
+      "balanceAmount": 31.6,
+      "depositPaid": true,
+      "status": "confirmed",
+      "seenByAdmin": true,
+      "balancePaid": false,
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "cancelledAt": null,
+      "checkInCode": "KS-164C50",
+      "createdAt": "2026-08-09T11:58:36.070Z"
+    },
+    {
+      "id": 9,
+      "userId": 5,
+      "roomId": 1,
+      "guestName": "Ah Smos",
+      "guestEmail": "AhSmos@gamil.com",
+      "dates": [
+        "2026-08-09"
+      ],
+      "guests": 1,
+      "nights": 1,
+      "totalPrice": 45,
+      "depositAmount": 27,
+      "balanceAmount": 18,
+      "depositPaid": true,
+      "status": "confirmed",
+      "seenByAdmin": true,
+      "balancePaid": false,
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "cancelledAt": null,
+      "checkInCode": "KS-9A621E",
+      "createdAt": "2026-08-09T12:03:05.638Z"
+    },
+    {
+      "id": 10,
+      "userId": 6,
+      "roomId": 1,
+      "guestName": "Koko",
+      "guestEmail": "AhSddmos@gamil.com",
+      "dates": [
+        "2026-08-21",
+        "2026-08-22"
+      ],
+      "guests": 1,
+      "nights": 2,
+      "totalPrice": 90,
+      "depositAmount": 54,
+      "balanceAmount": 36,
+      "depositPaid": true,
+      "status": "confirmed",
+      "seenByAdmin": true,
+      "balancePaid": false,
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "cancelledAt": null,
+      "checkInCode": "KS-80A05E",
+      "createdAt": "2026-08-14T10:05:27.961Z"
+    },
+    {
+      "id": 11,
+      "userId": 6,
+      "roomId": 5,
+      "guestName": "Koko",
+      "guestEmail": "AhSddmos@gamil.com",
+      "dates": [
+        "2026-08-20"
+      ],
+      "guests": 3,
+      "nights": 1,
+      "totalPrice": 79,
+      "depositAmount": 47.4,
+      "balanceAmount": 31.6,
+      "depositPaid": true,
+      "status": "confirmed",
+      "seenByAdmin": true,
+      "balancePaid": false,
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "cancelledAt": null,
+      "checkInCode": "KS-92E55E",
+      "createdAt": "2026-08-14T10:06:13.764Z"
+    },
+    {
+      "id": 12,
+      "userId": 7,
+      "roomId": 1,
+      "guestName": "SEANGLY SL",
+      "guestEmail": "Ah2Poy@gamil.com",
+      "dates": [
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-25"
+      ],
+      "guests": 1,
+      "nights": 3,
+      "totalPrice": 135,
+      "depositAmount": 81,
+      "balanceAmount": 54,
+      "depositPaid": true,
+      "status": "checked-in",
+      "seenByAdmin": true,
+      "balancePaid": true,
+      "checkedInAt": "2026-08-19T13:09:23.546Z",
+      "checkedOutAt": null,
+      "cancelledAt": null,
+      "checkInCode": "KS-471736",
+      "createdAt": "2026-08-19T13:03:51.908Z"
+    }
+  ],
+  "content": {
+    "hero": {
+      "eyebrow": {
+        "en": "Est. 2026 — 5-floor independent hotel",
+        "km": "បង្កើតឡើងឆ្នាំ ២០២៦ — សណ្ឋាគារឯករាជ្យ ៥ជាន់",
+        "zh": "始于2026年 — 五层独立酒店"
+      },
+      "heading": {
+        "en": "A quiet room, booked in under a minute.",
+        "km": "បន្ទប់ស្ងប់ស្ងាត់ កក់បានក្នុងរយៈពេលមិនដល់មួយនាទី",
+        "zh": "安静的客房，一分钟内即可预订"
+      },
+      "description": {
+        "en": "3 honest room types, a rooftop pool and bar, ground-floor breakfast, free parking, and real-time availability — no phone calls, no waiting for confirmation.",
+        "km": "បន្ទប់ 3 ប្រភេទស្មោះត្រង់ អាងហែលទឹក និងបារនៅដំបូល អាហារពេលព្រឹកនៅជាន់ផ្ទាល់ដី ចំណតរថយន្តឥតគិតថ្លៃ និងព័ត៌មានទំនេរជាក់ស្តែង — មិនចាំបាច់ទូរស័ព្ទ មិនចាំបាច់រង់ចាំការបញ្ជាក់ទេ។",
+        "zh": "四种诚实的客房类型、屋顶泳池与酒吧、一楼早餐、免费停车，以及实时房态查询——无需电话，无需等待确认。"
+      },
+      "images": [
+        "/images/1786214411884-c628995920.jpg",
+        "/images/1786214495031-708ef22657.jpg"
+      ]
+    },
+    "whyKiriStay": {
+      "eyebrow": {
+        "en": "Why Kiri Stay",
+        "km": "ហេតុអ្វីជ្រើសរើស Kiri Stay",
+        "zh": "为什么选择Kiri Stay"
+      },
+      "heading": {
+        "en": "Built like a ledger, not a leaflet",
+        "km": "សាងសង់ដូចជាបញ្ជីគណនេយ្យ មិនមែនខិត្តប័ណ្ណផ្សព្វផ្សាយ",
+        "zh": "如账本般严谨，而非宣传单页"
+      },
+      "description": {
+        "en": "Every booking here is tracked the way a hotel register always has been — one room, one date range, one confirmed line. We just moved the paper online.",
+        "km": "រាល់ការកក់នៅទីនេះត្រូវបានតាមដានតាមរបៀបដែលបញ្ជីសណ្ឋាគារធ្លាប់ធ្វើជានិច្ច — មួយបន្ទប់ មួយចន្លោះកាលបរិច្ឆេទ មួយបន្ទាត់បញ្ជាក់។ យើងគ្រាន់តែផ្លាស់ប្តូរក្រដាសនោះទៅជាអនឡាញ។",
+        "zh": "这里的每一笔预订都像酒店登记簿一样被记录——一间房，一个日期，一条确认记录。我们只是把纸质登记搬到了线上。"
+      },
+      "stats": [
+        {
+          "value": "5",
+          "label": {
+            "en": "Floors, one lift",
+            "km": "ជាន់ ៥ ជណ្តើរយន្តមួយ",
+            "zh": "五层楼，一部电梯"
+          }
+        },
+        {
+          "value": "35",
+          "label": {
+            "en": "Units on the floor",
+            "km": "បន្ទប់សរុបលើជាន់",
+            "zh": "各楼层客房总数"
+          }
+        },
+        {
+          "value": "24/7",
+          "label": {
+            "en": "Online booking desk",
+            "km": "ការិយាល័យកក់អនឡាញ ២៤/៧",
+            "zh": "24/7 在线预订服务"
+          }
+        }
+      ]
+    },
+    "onSite": {
+      "eyebrow": {
+        "en": "On site",
+        "km": "នៅលើទីតាំង",
+        "zh": "酒店设施"
+      },
+      "heading": {
+        "en": "Ground floor to rooftop",
+        "km": "ពីជាន់ផ្ទាល់ដីដល់ដំបូល",
+        "zh": "从一楼到屋顶"
+      },
+      "cards": [
+        {
+          "image": "/images/1786214674274-f3324386d2.jpg",
+          "title": {
+            "en": "Rooftop pool & bar",
+            "km": "អាងហែលទឹក និងបារនៅដំបូល",
+            "zh": "屋顶泳池与酒吧"
+          },
+          "description": {
+            "en": "Top floor — a lap pool with skyline views and a small bar serving drinks until late.",
+            "km": "ជាន់ខាងលើគេ — អាងហែលទឹកមើលឃើញទេសភាពទីក្រុង និងបារតូចមួយបម្រើភេសជ្ជៈរហូតដល់យប់ជ្រៅ។",
+            "zh": "顶层——可俯瞰城市天际线的泳池，配有营业至深夜的小酒吧。"
+          }
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1779301674216-506de8607c87?w=700&q=80&auto=format&fit=crop",
+          "title": {
+            "en": "Ground-floor breakfast",
+            "km": "អាហារពេលព្រឹកនៅជាន់ផ្ទាល់ដី",
+            "zh": "一楼早餐"
+          },
+          "description": {
+            "en": "A bright breakfast room off the lobby, included with every room, open every morning.",
+            "km": "បន្ទប់អាហារពេលព្រឹកភ្លឺស្វាងជាប់ Lobby រួមបញ្ចូលជាមួយរាល់បន្ទប់ បើកជានិច្ចរាល់ព្រឹក។",
+            "zh": "紧邻大堂的明亮早餐厅，每间客房均含早餐，每天早晨营业。"
+          }
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1742145680068-6da022eea9f5?w=700&q=80&auto=format&fit=crop",
+          "title": {
+            "en": "On-site parking",
+            "km": "ចំណតរថយន្តនៅទីតាំង",
+            "zh": "现场停车"
+          },
+          "description": {
+            "en": "Covered parking at street level, free for every registered guest during their stay.",
+            "km": "ចំណតរថយន្តមានដំបូលការពារនៅកម្រិតផ្លូវ ឥតគិតថ្លៃសម្រាប់ភ្ញៀវដែលបានចុះឈ្មោះរាល់ពេលស្នាក់នៅ។",
+            "zh": "街道层带顶棚停车场，所有注册入住的客人在住店期间均可免费使用。"
+          }
+        },
+        {
+          "image": "/images/1786214798903-530ba0c211.jpg",
+          "title": {
+            "en": "",
+            "km": "",
+            "zh": ""
+          },
+          "description": {
+            "en": "",
+            "km": "",
+            "zh": ""
+          }
+        },
+        {
+          "image": "/images/1786214816934-fdf541a00c.jpg",
+          "title": {
+            "en": "",
+            "km": "",
+            "zh": ""
+          },
+          "description": {
+            "en": "",
+            "km": "",
+            "zh": ""
+          }
+        },
+        {
+          "image": "/images/1786214827668-d94ad05138.jpg",
+          "title": {
+            "en": "",
+            "km": "",
+            "zh": ""
+          },
+          "description": {
+            "en": "",
+            "km": "",
+            "zh": ""
+          }
+        }
+      ]
+    },
+    "buildingGuide": {
+      "eyebrow": {
+        "en": "Building guide",
+        "km": "មគ្គុទ្ទេសក៍អគារ",
+        "zh": "楼层指南"
+      },
+      "heading": {
+        "en": "Five floors, one elevator",
+        "km": "ជាន់ ៥ ជណ្តើរយន្តមួយ",
+        "zh": "五层楼，一部电梯"
+      },
+      "rows": [
+        {
+          "label": {
+            "en": "Roof",
+            "km": "ដំបូល",
+            "zh": "屋顶"
+          },
+          "title": {
+            "en": "Pool deck & bar",
+            "km": "កន្លែងអាងហែលទឹក និងបារ",
+            "zh": "泳池平台与酒吧"
+          },
+          "description": {
+            "en": "Lap pool, loungers, and drinks — open to all guests.",
+            "km": "អាងហែលទឹក កៅអីអង្គុយ និងភេសជ្ជៈ — បើកចំហសម្រាប់ភ្ញៀវទាំងអស់។",
+            "zh": "泳池、躺椅与饮品——向所有客人开放。"
+          }
+        },
+        {
+          "label": {
+            "en": "Floor 4",
+            "km": "ជាន់ទី៤",
+            "zh": "四楼"
+          },
+          "title": {
+            "en": "Family Deluxe",
+            "km": "Family Deluxe",
+            "zh": "家庭豪华房"
+          },
+          "description": {
+            "en": "Multi-bed family rooms, top guest floor.",
+            "km": "បន្ទប់គ្រួសារមានគ្រែច្រើន ជាន់ភ្ញៀវលើគេ។",
+            "zh": "多床家庭房，位于最高的客房楼层。"
+          }
+        },
+        {
+          "label": {
+            "en": "Floor 3",
+            "km": "ជាន់ទី៣",
+            "zh": "三楼"
+          },
+          "title": {
+            "en": "Executive Suite",
+            "km": "Executive Suite",
+            "zh": "行政套房"
+          },
+          "description": {
+            "en": "Suites with a separate sitting area.",
+            "km": "បន្ទប់ suite មានផ្នែកអង្គុយដាច់ដោយឡែក។",
+            "zh": "带独立起居区的套房。"
+          }
+        },
+        {
+          "label": {
+            "en": "Floor 2",
+            "km": "ជាន់ទី២",
+            "zh": "二楼"
+          },
+          "title": {
+            "en": "Harbor Double",
+            "km": "Harbor Double",
+            "zh": "海港双人房"
+          },
+          "description": {
+            "en": "Two-bed rooms for friends or a couple.",
+            "km": "បន្ទប់មានគ្រែពីរសម្រាប់មិត្តភក្តិ ឬគូស្នេហ៍។",
+            "zh": "双床房，适合朋友或情侣入住。"
+          }
+        },
+        {
+          "label": {
+            "en": "Floor 1",
+            "km": "ជាន់ទី១",
+            "zh": "一楼"
+          },
+          "title": {
+            "en": "Garden Single",
+            "km": "Garden Single",
+            "zh": "花园单人房"
+          },
+          "description": {
+            "en": "Single rooms, right above the lobby.",
+            "km": "បន្ទប់តែមួយ នៅជាប់ខាងលើ Lobby។",
+            "zh": "位于大堂正上方的单人房。"
+          }
+        },
+        {
+          "label": {
+            "en": "Ground floor",
+            "km": "ជាន់ផ្ទាល់ដី",
+            "zh": "一楼大堂层"
+          },
+          "title": {
+            "en": "Lobby, breakfast room & front desk",
+            "km": "Lobby បន្ទប់អាហារពេលព្រឹក និងកន្លែងទទួលភ្ញៀវ",
+            "zh": "大堂、早餐厅与前台"
+          },
+          "description": {
+            "en": "Check-in, all-day breakfast service, and the main entrance.",
+            "km": "ចុះឈ្មោះចូល សេវាអាហារពេលព្រឹកពេញមួយថ្ងៃ និងច្រកចូលធំ។",
+            "zh": "办理入住、全天早餐服务及正门入口。"
+          }
+        },
+        {
+          "label": {
+            "en": "Street level",
+            "km": "កម្រិតផ្លូវ",
+            "zh": "街道层"
+          },
+          "title": {
+            "en": "Parking",
+            "km": "ចំណតរថយន្ត",
+            "zh": "停车场"
+          },
+          "description": {
+            "en": "Free covered parking for guests, right at the entrance.",
+            "km": "ចំណតរថយន្តមានដំបូលឥតគិតថ្លៃសម្រាប់ភ្ញៀវ នៅជាប់ច្រកចូល។",
+            "zh": "客人可在入口处免费使用带顶棚停车场。"
+          }
+        }
+      ]
+    },
+    "footer": {
+      "tagline": {
+        "en": "A small hotel, honestly run — clean rooms, fair prices, and a booking desk that never sleeps.",
+        "km": "សណ្ឋាគារតូចមួយ ដំណើរការដោយស្មោះត្រង់ — បន្ទប់ស្អាត តម្លៃសមរម្យ និងកន្លែងកក់ដែលមិនដែលដេកលក់។",
+        "zh": "一家诚信经营的小旅馆——客房整洁、价格公道，预订服务全天候在线。"
+      }
+    },
+    "about": {
+      "eyebrow": {
+        "en": "About Kiri Stay",
+        "km": "អំពី Kiri Stay",
+        "zh": "关于Kiri Stay"
+      },
+      "heading": {
+        "en": "A small hotel, run in the open",
+        "km": "សណ្ឋាគារតូចមួយ ដំណើរការដោយបើកចំហ",
+        "zh": "一家透明经营的小旅馆"
+      },
+      "paragraphs": [
+        {
+          "en": "Kiri Stay started as a single guesthouse and grew into 3 room types and 35 units, without ever hiring a call center. This site is our entire front desk: browse rooms, see live availability, and book — the same ledger our staff uses internally, just public-facing.",
+          "km": "Kiri Stay ចាប់ផ្តើមឡើងជាផ្ទះសំណាក់មួយ ហើយបានរីកចម្រើនទៅជាបន្ទប់ 3 ប្រភេទ សរុប 35 បន្ទប់ ដោយមិនដែលជួលមជ្ឈមណ្ឌលទូរស័ព្ទឡើយ។ គេហទំព័រនេះគឺជាកន្លែងទទួលភ្ញៀវទាំងមូលរបស់យើង៖ មើលបន្ទប់ ពិនិត្យភាពទំនេរជាក់ស្តែង និងកក់ — ជាបញ្ជីគណនេយ្យដដែលដែលបុគ្គលិកយើងប្រើផ្ទៃក្នុង គ្រាន់តែបង្ហាញជាសាធារណៈ។",
+          "zh": "Kiri Stay 最初只是一家小旅馆，如今已发展为四种客房类型、共35间客房，且从未设立呼叫中心。本网站就是我们完整的前台：浏览客房、查看实时房态并预订——与我们内部使用的登记簿完全相同，只是公开给客人使用。"
+        },
+        {
+          "en": "This project was built as a Seangly capstone demonstrating a full booking flow: authentication, room inventory (CRUD), date-based availability checks, and a role-based admin dashboard.",
+          "km": "គម្រោងនេះត្រូវបានសាងសង់ជាគម្រោងបញ្ចប់ការសិក្សារបស់និស្សិតSeangly ដើម្បីបង្ហាញពីលំហូរកក់ពេញលេញ៖ ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ សារពើភ័ណ្ឌបន្ទប់ (CRUD) ការត្រួតពិនិត្យភាពទំនេរតាមកាលបរិច្ឆេទ និងផ្ទាំងគ្រប់គ្រងតាមតួនាទី។",
+          "zh": "本项目作为学生毕业设计，展示了完整的预订流程：身份验证、客房库存管理（增删改查）、按日期查询房态，以及基于角色的管理后台。"
+        }
+      ],
+      "atAGlanceHeading": {
+        "en": "At a glance",
+        "km": "សង្ខេបរួម",
+        "zh": "一览"
+      },
+      "atAGlance": [
+        {
+          "en": "5 floors, one elevator, 3 room types, 35 total units",
+          "km": "ជាន់ 5 ជណ្តើរយន្តមួយ បន្ទប់ 3 ប្រភេទ សរុប 35 បន្ទប់",
+          "zh": "五层楼，一部电梯，四种客房类型，共35间客房"
+        },
+        {
+          "en": "Rooftop pool & bar, ground-floor breakfast, free parking",
+          "km": "អាងហែលទឹក និងបារនៅដំបូល អាហារពេលព្រឹកនៅជាន់ផ្ទាល់ដី ចំណតឥតគិតថ្លៃ",
+          "zh": "屋顶泳池与酒吧，一楼早餐，免费停车"
+        },
+        {
+          "en": "Real-time availability by date range",
+          "km": "ព័ត៌មានទំនេរជាក់ស្តែងតាមចន្លោះកាលបរិច្ឆេទ",
+          "zh": "按日期范围实时查询房态"
+        },
+        {
+          "en": "Customer + Admin accounts",
+          "km": "គណនីភ្ញៀវ និងអ្នកគ្រប់គ្រង",
+          "zh": "客户与管理员账户"
+        },
+        {
+          "en": "Booking history and cancellation",
+          "km": "ប្រវត្តិកក់ និងការលុបចោល",
+          "zh": "预订历史与取消功能"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": {
+        "en": "Get in touch SL",
+        "km": "ទាក់ទងមកយើង",
+        "zh": "联系我们"
+      },
+      "heading": {
+        "en": "We're easy to reach",
+        "km": "យើងងាយស្រួលទាក់ទង",
+        "zh": "轻松联系我们"
+      },
+      "address": {
+        "en": "123 Harbor Road, Phnom Penh",
+        "km": "១២៣ ផ្លូវហាបើរ Phnom Penh",
+        "zh": "柬埔寨贡布省海港路123号"
+      },
+      "phone": {
+        "en": "+855 97 601 61 26",
+        "km": "+855 97 601 61 26",
+        "zh": "+855 97 601 61 26"
+      },
+      "email": {
+        "en": "kiristay@gmail.com",
+        "km": "kiristay@gmail.com",
+        "zh": "kiristay@gmail.com"
+      },
+      "hours": {
+        "en": "Front desk staffed daily, 7am–11pm. For booking changes, use your dashboard — it's faster than email.",
+        "km": "កន្លែងទទួលភ្ញៀវបើកជានិច្ចរាល់ថ្ងៃ ម៉ោង ៧ ព្រឹក ដល់ ១១ យប់។ សម្រាប់ការផ្លាស់ប្តូរការកក់ សូមប្រើផ្ទាំងគ្រប់គ្រងរបស់អ្នក — លឿនជាងអ៊ីមែល។",
+        "zh": "前台每日7:00至23:00提供服务。如需更改预订，请使用您的账户面板——比发送邮件更快捷。"
+      }
+    }
+  },
+  "messages": [
+    {
+      "id": 1,
+      "name": "SEANGLY",
+      "email": "slseangly0@gmail.com",
+      "message": "Hello",
+      "read": true,
+      "createdAt": "2026-08-19T11:33:20.912Z"
+    },
+    {
+      "id": 2,
+      "name": "SEANGLY",
+      "email": "slseangly0@gmail.com",
+      "message": "Hello",
+      "read": true,
+      "createdAt": "2026-08-19T13:04:59.635Z"
+    }
+  ],
+  "settings": {
+    "standardCheckInTime": "11:30 AM"
+  }
+}

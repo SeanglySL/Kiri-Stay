@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Register — Kiri Stay</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/index.html" class="brand">Kiri <span>Stay</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="/rooms.html" data-i18n="nav.rooms">Rooms</a></li>
+      <li><a href="/about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul></nav>
+    <div class="nav-auth">
+      <a href="/login.html" class="btn btn-outline btn-sm" data-i18n="auth.login">Log in</a>
+      <a href="/register.html" class="btn btn-brass btn-sm active" data-i18n="auth.register">Register</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="auth-shell">
+  <div class="panel">
+    <span class="eyebrow">New here</span>
+    <h2>Create your account</h2>
+    <div id="msg" class="msg"></div>
+    <form id="register-form">
+      <div class="field"><label for="name">Full name</label><input type="text" id="name" required /></div>
+      <div class="field"><label for="email">Email</label><input type="email" id="email" required /></div>
+      <div class="field"><label for="password">Password</label><input type="password" id="password" minlength="6" required /></div>
+      <button type="submit" class="btn btn-brass btn-block">Create account</button>
+    </form>
+    <p class="muted" style="margin-top:16px;">Already registered? <a href="/login.html" data-i18n="auth.login">Log in</a>.</p>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/register.js"></script>
+</body>
+</html>

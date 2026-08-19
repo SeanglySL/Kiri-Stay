@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Site Content — Kiri Stay Admin</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/index.html" class="brand">Kiri <span>Stay</span></a>
+    <div class="nav-auth">
+      <span class="muted">Admin: <span data-user-name></span></span>
+      <a href="#" data-action="logout" class="btn btn-brass btn-sm">Log out</a>
+    </div>
+  </div>
+</header>
+
+<div class="dash-shell">
+  <aside class="dash-side">
+    <a href="/admin/index.html">Overview</a>
+    <a href="/admin/analytics.html">Booking & Payments</a>
+    <a href="/admin/rooms.html">Rooms</a>
+    <a href="/admin/bookings.html">Bookings</a>
+    <a href="/admin/users.html">Customers</a>
+    <a href="/admin/messages.html">Messages</a>
+    <div class="dash-side-label">Site Content</div>
+    <a href="/admin/content.html#home">Home Page</a>
+    <a href="/admin/content.html#why">Why Kiri Stay</a>
+    <a href="/admin/content.html#onsite">On Site</a>
+    <a href="/admin/content.html#guide">Building Guide</a>
+    <a href="/admin/content.html#footer">Kiri Stay (footer)</a>
+    <a href="/admin/content.html#about">About Page</a>
+    <a href="/admin/content.html#contact">Contact Page</a>
+  </aside>
+  <main class="dash-main">
+    <span class="eyebrow">Editable site copy</span>
+    <h1>Site Content</h1>
+    <p class="muted" style="margin-bottom:30px;">Every text field needs all 3 languages (English, Khmer, Chinese) filled in — that's what lets a visitor switch languages and always see real text. Each box saves on its own.</p>
+
+    <div id="content-msg" class="msg"></div>
+
+    <!-- ===================== HOME PAGE / HERO ===================== -->
+    <section id="home" class="panel" style="margin-bottom:34px; scroll-margin-top:20px;">
+      <h2 class="mt-0">Home Page — Hero</h2>
+      <p class="muted">The big banner at the top of the home page, including the rotating photos.</p>
+      <form id="form-hero">
+        <div class="field"><label>Eyebrow (small label above the heading)</label><div id="hero-eyebrow-i18n"></div></div>
+        <div class="field"><label>Heading</label><div id="hero-heading-i18n"></div></div>
+        <div class="field"><label>Description</label><div id="hero-description-i18n"></div></div>
+        <label>Rotating photos (advance every 3 seconds — image URLs aren't translated)</label>
+        <div id="hero-images-list" class="repeat-list"></div>
+        <button type="button" class="btn btn-outline btn-sm" id="hero-add-image" style="margin-top:8px;">+ Add photo</button>
+        <div class="flex gap-12" style="margin-top:18px;">
+          <button type="submit" class="btn btn-brass">Save Home Page</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===================== WHY KIRI STAY ===================== -->
+    <section id="why" class="panel" style="margin-bottom:34px; scroll-margin-top:20px;">
+      <h2 class="mt-0">Why Kiri Stay</h2>
+      <p class="muted">The text-and-stats section below the room listings on the home page.</p>
+      <form id="form-why">
+        <div class="field"><label>Eyebrow</label><div id="why-eyebrow-i18n"></div></div>
+        <div class="field"><label>Heading</label><div id="why-heading-i18n"></div></div>
+        <div class="field"><label>Description</label><div id="why-description-i18n"></div></div>
+        <label>Stat boxes</label>
+        <div id="why-stats-list" class="repeat-list"></div>
+        <button type="button" class="btn btn-outline btn-sm" id="why-add-stat" style="margin-top:8px;">+ Add stat box</button>
+        <div class="flex gap-12" style="margin-top:18px;">
+          <button type="submit" class="btn btn-brass">Save Why Kiri Stay</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===================== ON SITE ===================== -->
+    <section id="onsite" class="panel" style="margin-bottom:34px; scroll-margin-top:20px;">
+      <h2 class="mt-0">On Site</h2>
+      <p class="muted">The photo cards for hotel amenities (pool, breakfast, parking, etc).</p>
+      <form id="form-onsite">
+        <div class="field"><label>Eyebrow</label><div id="onsite-eyebrow-i18n"></div></div>
+        <div class="field"><label>Heading</label><div id="onsite-heading-i18n"></div></div>
+        <label>Amenity cards</label>
+        <div id="onsite-cards-list" class="repeat-list"></div>
+        <button type="button" class="btn btn-outline btn-sm" id="onsite-add-card" style="margin-top:8px;">+ Add amenity card</button>
+        <div class="flex gap-12" style="margin-top:18px;">
+          <button type="submit" class="btn btn-brass">Save On Site</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===================== BUILDING GUIDE ===================== -->
+    <section id="guide" class="panel" style="margin-bottom:34px; scroll-margin-top:20px;">
+      <h2 class="mt-0">Building Guide</h2>
+      <p class="muted">The floor-by-floor list under "On Site" on the home page.</p>
+      <form id="form-guide">
+        <div class="field"><label>Eyebrow</label><div id="guide-eyebrow-i18n"></div></div>
+        <div class="field"><label>Heading</label><div id="guide-heading-i18n"></div></div>
+        <label>Floor rows (top to bottom, in the order shown)</label>
+        <div id="guide-rows-list" class="repeat-list"></div>
+        <button type="button" class="btn btn-outline btn-sm" id="guide-add-row" style="margin-top:8px;">+ Add floor row</button>
+        <div class="flex gap-12" style="margin-top:18px;">
+          <button type="submit" class="btn btn-brass">Save Building Guide</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <section id="footer" class="panel" style="margin-bottom:34px; scroll-margin-top:20px;">
+      <h2 class="mt-0">Kiri Stay (footer)</h2>
+      <p class="muted">The short tagline under the "Kiri Stay" logo in the footer — shown on every page.</p>
+      <form id="form-footer">
+        <div class="field"><label>Tagline</label><div id="footer-tagline-i18n"></div></div>
+        <div class="flex gap-12" style="margin-top:8px;">
+          <button type="submit" class="btn btn-brass">Save footer</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===================== ABOUT PAGE ===================== -->
+    <section id="about" class="panel" style="margin-bottom:34px; scroll-margin-top:20px;">
+      <h2 class="mt-0">About Page</h2>
+      <p class="muted">The text on /about.html.</p>
+      <form id="form-about">
+        <div class="field"><label>Eyebrow</label><div id="about-eyebrow-i18n"></div></div>
+        <div class="field"><label>Heading</label><div id="about-heading-i18n"></div></div>
+        <label>Paragraphs</label>
+        <div id="about-paragraphs-list" class="repeat-list"></div>
+        <button type="button" class="btn btn-outline btn-sm" id="about-add-paragraph" style="margin-top:8px;">+ Add paragraph</button>
+
+        <div class="field" style="margin-top:20px;"><label>"At a glance" box heading</label><div id="about-glance-heading-i18n"></div></div>
+        <label>"At a glance" bullet points</label>
+        <div id="about-glance-list-edit" class="repeat-list"></div>
+        <button type="button" class="btn btn-outline btn-sm" id="about-add-bullet" style="margin-top:8px;">+ Add bullet point</button>
+
+        <div class="flex gap-12" style="margin-top:18px;">
+          <button type="submit" class="btn btn-brass">Save About Page</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===================== CONTACT PAGE ===================== -->
+    <section id="contact" class="panel" style="scroll-margin-top:20px;">
+      <h2 class="mt-0">Contact Page</h2>
+      <p class="muted">The text on /contact.html.</p>
+      <form id="form-contact">
+        <div class="field"><label>Eyebrow</label><div id="contact-eyebrow-i18n"></div></div>
+        <div class="field"><label>Heading</label><div id="contact-heading-i18n"></div></div>
+        <div class="field"><label>Address</label><div id="contact-address-i18n"></div></div>
+        <div class="field"><label>Phone</label><div id="contact-phone-i18n"></div></div>
+        <div class="field"><label>Email</label><div id="contact-email-i18n"></div></div>
+        <div class="field"><label>Hours / note</label><div id="contact-hours-i18n"></div></div>
+        <div class="flex gap-12" style="margin-top:8px;">
+          <button type="submit" class="btn btn-brass">Save Contact Page</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</div>
+
+<script src="/js/app.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/admin-bell.js"></script>
+<script src="/js/admin-content.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kiri Stay — Hotel Room Booking</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/index.html" class="brand">Kiri <span>Stay</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="/index.html" class="active" data-i18n="nav.home">Home</a></li>
+      <li><a href="/rooms.html" data-i18n="nav.rooms">Rooms</a></li>
+      <li><a href="/about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul></nav>
+    <div class="nav-auth">
+      <a href="/login.html" class="btn btn-outline btn-sm" data-auth="guest">Log in</a>
+      <a href="/register.html" class="btn btn-brass btn-sm" data-auth="guest">Register</a>
+      <a href="#" data-dashboard-link class="btn btn-outline btn-sm" data-auth="user" data-i18n="auth.dashboard">Dashboard</a>
+      <a href="#" data-action="logout" class="btn btn-brass btn-sm" data-auth="user" data-i18n="auth.logout">Log out</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-slides" id="hero-slides"></div>
+  <div class="hero-dots" id="hero-dots"></div>
+  <div class="container">
+    <span class="eyebrow" id="hero-eyebrow"></span>
+    <h1 id="hero-heading"></h1>
+    <p class="lead" id="hero-description"></p>
+    <a href="/rooms.html" class="btn btn-brass" style="margin-top:26px;">Browse all rooms</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Room types</span>
+        <h2>One room type per floor</h2>
+      </div>
+      <a href="/rooms.html" class="btn btn-outline btn-sm">View all rooms</a>
+    </div>
+    <div id="rooms-by-floor">
+      <p class="muted">Loading rooms…</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container grid-2">
+    <div>
+      <span class="eyebrow" id="why-eyebrow"></span>
+      <h2 id="why-heading"></h2>
+      <p id="why-description"></p>
+    </div>
+    <div class="stat-row" id="why-stats" style="align-self:center;"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow" id="onsite-eyebrow"></span>
+        <h2 id="onsite-heading"></h2>
+      </div>
+    </div>
+    <div class="amenity-grid" id="onsite-cards"></div>
+
+    <div style="margin-top:44px;">
+      <span class="eyebrow" id="guide-eyebrow"></span>
+      <h3 id="guide-heading" style="margin-bottom:16px;"></h3>
+      <ul class="floor-list" id="guide-rows"></ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="brand" style="color:var(--ivory)">Kiri <span>Stay</span></div>
+      <p id="footer-tagline" style="max-width:260px;color:rgba(250,247,241,0.55);margin-top:10px;"></p>
+    </div>
+    <div class="foot-cols">
+      <div><h4 data-i18n="footer.explore">Explore</h4><ul><li><a href="/rooms.html" data-i18n="nav.rooms">Rooms</a></li><li><a href="/about.html" data-i18n="nav.about">About</a></li><li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li></ul></div>
+      <div><h4 data-i18n="footer.account">Account</h4><ul><li><a href="/login.html" data-i18n="auth.login">Log in</a></li><li><a href="/register.html" data-i18n="auth.register">Register</a></li></ul></div>
+    </div>
+  </div>
+  <div class="foot-bottom container">© 2026 Kiri Stay Hotel - Developed by Seangly.</div>
+</footer>
+
+<script src="/js/app.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/home.js"></script>
+</body>
+</html>
