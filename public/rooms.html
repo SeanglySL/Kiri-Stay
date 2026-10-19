@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rooms — Kiri Stay</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/index.html" class="brand">Kiri <span>Stay</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="/rooms.html" class="active" data-i18n="nav.rooms">Rooms</a></li>
+      <li><a href="/about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul></nav>
+    <div class="nav-auth">
+      <a href="/login.html" class="btn btn-outline btn-sm" data-auth="guest">Log in</a>
+      <a href="/register.html" class="btn btn-brass btn-sm" data-auth="guest">Register</a>
+      <a href="#" data-dashboard-link class="btn btn-outline btn-sm" data-auth="user" data-i18n="auth.dashboard">Dashboard</a>
+      <a href="#" data-action="logout" class="btn btn-brass btn-sm" data-auth="user" data-i18n="auth.logout">Log out</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <span class="eyebrow">All rooms</span>
+    <h1 style="margin-bottom:24px;">Browse rooms, see what fits</h1>
+
+    <form class="search-card" id="filter-form" style="margin-top:0; grid-template-columns: 1fr 1fr auto;">
+      <div class="field">
+        <label for="f-price">Price</label>
+        <select id="f-price">
+          <option value="">Any price</option>
+          <option value="50">Under $50</option>
+          <option value="100">Under $100</option>
+          <option value="150">Under $150</option>
+          <option value="200">Under $200</option>
+          <option value="300">Under $300</option>
+          <option value="500">Under $500</option>
+          <option value="500plus">Over $500</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-type">Room type</label>
+        <select id="f-type">
+          <option value="">Any type</option>
+          <option value="single">Single Bed</option>
+          <option value="double">Double Bed</option>
+          <option value="3bed">3 Bed</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-brass">Filter</button>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="room-grid" id="room-list">
+      <p class="muted">Loading rooms…</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="brand" style="color:var(--ivory)">Kiri <span>Stay</span></div>
+      <p id="footer-tagline" style="max-width:260px;color:rgba(250,247,241,0.55);margin-top:10px;">A small hotel, honestly run.</p>
+    </div>
+    <div class="foot-cols">
+      <div><h4 data-i18n="footer.explore">Explore</h4><ul><li><a href="/rooms.html" data-i18n="nav.rooms">Rooms</a></li><li><a href="/about.html" data-i18n="nav.about">About</a></li><li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li></ul></div>
+      <div><h4 data-i18n="footer.account">Account</h4><ul><li><a href="/login.html" data-i18n="auth.login">Log in</a></li><li><a href="/register.html" data-i18n="auth.register">Register</a></li></ul></div>
+    </div>
+  </div>
+  <div class="foot-bottom container">© 2026 Kiri Stay. Student capstone project.</div>
+</footer>
+
+<script src="/js/app.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/rooms.js"></script>
+</body>
+</html>

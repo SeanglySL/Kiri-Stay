@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Log in — Kiri Stay</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/index.html" class="brand">Kiri <span>Stay</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="/rooms.html" data-i18n="nav.rooms">Rooms</a></li>
+      <li><a href="/about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul></nav>
+    <div class="nav-auth">
+      <a href="/login.html" class="btn btn-outline btn-sm active" data-i18n="auth.login">Log in</a>
+      <a href="/register.html" class="btn btn-brass btn-sm" data-i18n="auth.register">Register</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="auth-shell">
+  <div class="panel">
+    <span class="eyebrow">Welcome back</span>
+    <h2>Log in to Kiri Stay</h2>
+    <div id="msg" class="msg"></div>
+    <form id="login-form">
+      <div class="field"><label for="email">Email</label><input type="email" id="email" required /></div>
+      <div class="field"><label for="password">Password</label><input type="password" id="password" required /></div>
+      <button type="submit" class="btn btn-brass btn-block">Log in</button>
+    </form>
+    <p class="muted" style="margin-top:16px;">No account yet? <a href="/register.html">Register here</a>.</p>
+    <p class="muted">Forgot your password? <a href="/contact.html">Contact the front desk</a> — we'll verify it's you and reset it.</p>
+    <p class="muted">Admin demo login: <code>admin@kiristay.com</code> / <code>admin123</code></p>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/login.js"></script>
+</body>
+</html>

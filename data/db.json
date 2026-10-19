@@ -1,0 +1,488 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Hotel Admin",
+      "email": "admin@kiristay.com",
+      "passwordHash": "0220d85f441bfec5f475935b3a4fe637adfc65ac5e368479551cc58267ee79c0519ea5b3b0e4149a4ffdd0aef0a9b5b2b76b8713447f83d9880de52a02cca825",
+      "salt": "486b067dcfe4fedc26ed70164acd146c",
+      "role": "admin",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Garden Single",
+      "floor": 1,
+      "pricePerNight": 45,
+      "capacity": 1,
+      "type": {
+        "en": "Single",
+        "km": "តែមួយ",
+        "zh": "单人间"
+      },
+      "description": {
+        "en": "A calm, sun-lit room with one bed — perfect for the solo traveller.",
+        "km": "បន្ទប់ស្ងប់ស្ងាត់ មានពន្លឺថ្ងៃភ្លឺស្វាង មានគ្រែមួយ — សមស្របសម្រាប់អ្នកធ្វើដំណើរតែម្នាក់ឯង។",
+        "zh": "宁静采光良好的客房，配有一张床——非常适合独自旅行的客人。"
+      },
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Work desk, Breakfast included",
+        "km": "វិហ្វីឥតគិតថ្លៃ, ម៉ាស៊ីនត្រជាក់, តុធ្វើការ, រួមអាហារពេលព្រឹក",
+        "zh": "免费WiFi, 空调, 办公桌, 含早餐"
+      },
+      "image": "https://images.unsplash.com/photo-1744534637336-6110864236fc?w=900&q=80&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1744534637336-6110864236fc?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519219788971-8d9797e0928e?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516381763478-fa82c946f04f?w=1000&q=80&auto=format&fit=crop"
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Harbor Double",
+      "floor": 2,
+      "pricePerNight": 72,
+      "capacity": 2,
+      "type": {
+        "en": "Double",
+        "km": "ពីរនាក់",
+        "zh": "双人间"
+      },
+      "description": {
+        "en": "Two beds and a bright window — spacious enough for friends or a couple.",
+        "km": "គ្រែពីរ និងបង្អួចភ្លឺស្វាង — ធំល្មមសម្រាប់មិត្តភក្តិ ឬគូស្នេហ៍។",
+        "zh": "两张床，明亮的窗户——空间足够朋友或情侣入住。"
+      },
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Mini fridge, Breakfast included",
+        "km": "វិហ្វីឥតគិតថ្លៃ, ម៉ាស៊ីនត្រជាក់, ទូទឹកកកតូច, រួមអាហារពេលព្រឹក",
+        "zh": "免费WiFi, 空调, 小冰箱, 含早餐"
+      },
+      "image": "https://images.unsplash.com/photo-1642399179458-c11c50e3ce1d?w=900&q=80&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1642399179458-c11c50e3ce1d?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519219788971-8d9797e0928e?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516381763478-fa82c946f04f?w=1000&q=80&auto=format&fit=crop"
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Executive Suite",
+      "floor": 3,
+      "pricePerNight": 145,
+      "capacity": 3,
+      "type": {
+        "en": "Suite",
+        "km": "ស៊ុយត៍",
+        "zh": "套房"
+      },
+      "description": {
+        "en": "A separate sitting area and a king bed, built for longer stays.",
+        "km": "ផ្នែកអង្គុយដាច់ដោយឡែក និងគ្រែធំ សាងសង់ឡើងសម្រាប់ការស្នាក់នៅរយៈពេលវែង។",
+        "zh": "独立起居区与特大号床，专为长住宾客设计。"
+      },
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Living area, Mini bar, Breakfast included, Late checkout",
+        "km": "វិហ្វីឥតគិតថ្លៃ, ម៉ាស៊ីនត្រជាក់, ផ្នែកអង្គុយលេង, បារតូច, រួមអាហារពេលព្រឹក, ចេញយឺត",
+        "zh": "免费WiFi, 空调, 起居区, 迷你吧, 含早餐, 延迟退房"
+      },
+      "image": "https://images.unsplash.com/photo-1664227430717-9a62112984cf?w=900&q=80&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1664227430717-9a62112984cf?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519219788971-8d9797e0928e?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516381763478-fa82c946f04f?w=1000&q=80&auto=format&fit=crop"
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Family Deluxe",
+      "floor": 4,
+      "pricePerNight": 98,
+      "capacity": 4,
+      "type": {
+        "en": "Family",
+        "km": "គ្រួសារ",
+        "zh": "家庭房"
+      },
+      "description": {
+        "en": "Multiple beds and extra floor space, built for families travelling together.",
+        "km": "គ្រែច្រើន និងកន្លែងទំនេរបន្ថែម សាងសង់ឡើងសម្រាប់គ្រួសារធ្វើដំណើរជាមួយគ្នា។",
+        "zh": "多张床与充裕空间，专为结伴出行的家庭设计。"
+      },
+      "amenities": {
+        "en": "Free WiFi, Air conditioning, Extra beds, Breakfast included",
+        "km": "វិហ្វីឥតគិតថ្លៃ, ម៉ាស៊ីនត្រជាក់, គ្រែបន្ថែម, រួមអាហារពេលព្រឹក",
+        "zh": "免费WiFi, 空调, 加床, 含早餐"
+      },
+      "image": "https://images.unsplash.com/photo-1723258343563-7d71a55d6dfa?w=900&q=80&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1723258343563-7d71a55d6dfa?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519219788971-8d9797e0928e?w=1000&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516381763478-fa82c946f04f?w=1000&q=80&auto=format&fit=crop"
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "bookings": [],
+  "content": {
+    "hero": {
+      "eyebrow": {
+        "en": "Est. 2026 — 5-floor independent hotel",
+        "km": "បង្កើតឡើងឆ្នាំ ២០២៦ — សណ្ឋាគារឯករាជ្យ ៥ជាន់",
+        "zh": "始于2026年 — 五层独立酒店"
+      },
+      "heading": {
+        "en": "A quiet room, booked in under a minute.",
+        "km": "បន្ទប់ស្ងប់ស្ងាត់ កក់បានក្នុងរយៈពេលមិនដល់មួយនាទី",
+        "zh": "安静的客房，一分钟内即可预订"
+      },
+      "description": {
+        "en": "Four honest room types, a rooftop pool and bar, ground-floor breakfast, free parking, and real-time availability — no phone calls, no waiting for confirmation.",
+        "km": "បន្ទប់ ៤ ប្រភេទស្មោះត្រង់ អាងហែលទឹក និងបារនៅដំបូល អាហារពេលព្រឹកនៅជាន់ផ្ទាល់ដី ចំណតរថយន្តឥតគិតថ្លៃ និងព័ត៌មានទំនេរជាក់ស្តែង — មិនចាំបាច់ទូរស័ព្ទ មិនចាំបាច់រង់ចាំការបញ្ជាក់ទេ។",
+        "zh": "四种诚实的客房类型、屋顶泳池与酒吧、一楼早餐、免费停车，以及实时房态查询——无需电话，无需等待确认。"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1673687781946-e0570d6d1f32?w=1800&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1575374643949-9843728de185?w=1800&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1758448721134-1798533ae917?w=1800&q=80&auto=format&fit=crop"
+      ]
+    },
+    "whyKiriStay": {
+      "eyebrow": {
+        "en": "Why Kiri Stay",
+        "km": "ហេតុអ្វីជ្រើសរើស Kiri Stay",
+        "zh": "为什么选择Kiri Stay"
+      },
+      "heading": {
+        "en": "Built like a ledger, not a leaflet",
+        "km": "សាងសង់ដូចជាបញ្ជីគណនេយ្យ មិនមែនខិត្តប័ណ្ណផ្សព្វផ្សាយ",
+        "zh": "如账本般严谨，而非宣传单页"
+      },
+      "description": {
+        "en": "Every booking here is tracked the way a hotel register always has been — one room, one date range, one confirmed line. We just moved the paper online.",
+        "km": "រាល់ការកក់នៅទីនេះត្រូវបានតាមដានតាមរបៀបដែលបញ្ជីសណ្ឋាគារធ្លាប់ធ្វើជានិច្ច — មួយបន្ទប់ មួយចន្លោះកាលបរិច្ឆេទ មួយបន្ទាត់បញ្ជាក់។ យើងគ្រាន់តែផ្លាស់ប្តូរក្រដាសនោះទៅជាអនឡាញ។",
+        "zh": "这里的每一笔预订都像酒店登记簿一样被记录——一间房，一个日期，一条确认记录。我们只是把纸质登记搬到了线上。"
+      },
+      "stats": [
+        {
+          "value": "5",
+          "label": {
+            "en": "Floors, one lift",
+            "km": "ជាន់ ៥ ជណ្តើរយន្តមួយ",
+            "zh": "五层楼，一部电梯"
+          }
+        },
+        {
+          "value": "21",
+          "label": {
+            "en": "Units on the floor",
+            "km": "បន្ទប់សរុបលើជាន់",
+            "zh": "各楼层客房总数"
+          }
+        },
+        {
+          "value": "24/7",
+          "label": {
+            "en": "Online booking desk",
+            "km": "ការិយាល័យកក់អនឡាញ ២៤/៧",
+            "zh": "24/7 在线预订服务"
+          }
+        }
+      ]
+    },
+    "onSite": {
+      "eyebrow": {
+        "en": "On site",
+        "km": "នៅលើទីតាំង",
+        "zh": "酒店设施"
+      },
+      "heading": {
+        "en": "Ground floor to rooftop",
+        "km": "ពីជាន់ផ្ទាល់ដីដល់ដំបូល",
+        "zh": "从一楼到屋顶"
+      },
+      "cards": [
+        {
+          "image": "https://images.unsplash.com/photo-1575374643949-9843728de185?w=700&q=80&auto=format&fit=crop",
+          "title": {
+            "en": "Rooftop pool & bar",
+            "km": "អាងហែលទឹក និងបារនៅដំបូល",
+            "zh": "屋顶泳池与酒吧"
+          },
+          "description": {
+            "en": "Top floor — a lap pool with skyline views and a small bar serving drinks until late.",
+            "km": "ជាន់ខាងលើគេ — អាងហែលទឹកមើលឃើញទេសភាពទីក្រុង និងបារតូចមួយបម្រើភេសជ្ជៈរហូតដល់យប់ជ្រៅ។",
+            "zh": "顶层——可俯瞰城市天际线的泳池，配有营业至深夜的小酒吧。"
+          }
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1779301674216-506de8607c87?w=700&q=80&auto=format&fit=crop",
+          "title": {
+            "en": "Ground-floor breakfast",
+            "km": "អាហារពេលព្រឹកនៅជាន់ផ្ទាល់ដី",
+            "zh": "一楼早餐"
+          },
+          "description": {
+            "en": "A bright breakfast room off the lobby, included with every room, open every morning.",
+            "km": "បន្ទប់អាហារពេលព្រឹកភ្លឺស្វាងជាប់ Lobby រួមបញ្ចូលជាមួយរាល់បន្ទប់ បើកជានិច្ចរាល់ព្រឹក។",
+            "zh": "紧邻大堂的明亮早餐厅，每间客房均含早餐，每天早晨营业。"
+          }
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1742145680068-6da022eea9f5?w=700&q=80&auto=format&fit=crop",
+          "title": {
+            "en": "On-site parking",
+            "km": "ចំណតរថយន្តនៅទីតាំង",
+            "zh": "现场停车"
+          },
+          "description": {
+            "en": "Covered parking at street level, free for every registered guest during their stay.",
+            "km": "ចំណតរថយន្តមានដំបូលការពារនៅកម្រិតផ្លូវ ឥតគិតថ្លៃសម្រាប់ភ្ញៀវដែលបានចុះឈ្មោះរាល់ពេលស្នាក់នៅ។",
+            "zh": "街道层带顶棚停车场，所有注册入住的客人在住店期间均可免费使用。"
+          }
+        }
+      ]
+    },
+    "buildingGuide": {
+      "eyebrow": {
+        "en": "Building guide",
+        "km": "មគ្គុទ្ទេសក៍អគារ",
+        "zh": "楼层指南"
+      },
+      "heading": {
+        "en": "Five floors, one elevator",
+        "km": "ជាន់ ៥ ជណ្តើរយន្តមួយ",
+        "zh": "五层楼，一部电梯"
+      },
+      "rows": [
+        {
+          "label": {
+            "en": "Roof",
+            "km": "ដំបូល",
+            "zh": "屋顶"
+          },
+          "title": {
+            "en": "Pool deck & bar",
+            "km": "កន្លែងអាងហែលទឹក និងបារ",
+            "zh": "泳池平台与酒吧"
+          },
+          "description": {
+            "en": "Lap pool, loungers, and drinks — open to all guests.",
+            "km": "អាងហែលទឹក កៅអីអង្គុយ និងភេសជ្ជៈ — បើកចំហសម្រាប់ភ្ញៀវទាំងអស់។",
+            "zh": "泳池、躺椅与饮品——向所有客人开放。"
+          }
+        },
+        {
+          "label": {
+            "en": "Floor 4",
+            "km": "ជាន់ទី៤",
+            "zh": "四楼"
+          },
+          "title": {
+            "en": "Family Deluxe",
+            "km": "Family Deluxe",
+            "zh": "家庭豪华房"
+          },
+          "description": {
+            "en": "Multi-bed family rooms, top guest floor.",
+            "km": "បន្ទប់គ្រួសារមានគ្រែច្រើន ជាន់ភ្ញៀវលើគេ។",
+            "zh": "多床家庭房，位于最高的客房楼层。"
+          }
+        },
+        {
+          "label": {
+            "en": "Floor 3",
+            "km": "ជាន់ទី៣",
+            "zh": "三楼"
+          },
+          "title": {
+            "en": "Executive Suite",
+            "km": "Executive Suite",
+            "zh": "行政套房"
+          },
+          "description": {
+            "en": "Suites with a separate sitting area.",
+            "km": "បន្ទប់ suite មានផ្នែកអង្គុយដាច់ដោយឡែក។",
+            "zh": "带独立起居区的套房。"
+          }
+        },
+        {
+          "label": {
+            "en": "Floor 2",
+            "km": "ជាន់ទី២",
+            "zh": "二楼"
+          },
+          "title": {
+            "en": "Harbor Double",
+            "km": "Harbor Double",
+            "zh": "海港双人房"
+          },
+          "description": {
+            "en": "Two-bed rooms for friends or a couple.",
+            "km": "បន្ទប់មានគ្រែពីរសម្រាប់មិត្តភក្តិ ឬគូស្នេហ៍។",
+            "zh": "双床房，适合朋友或情侣入住。"
+          }
+        },
+        {
+          "label": {
+            "en": "Floor 1",
+            "km": "ជាន់ទី១",
+            "zh": "一楼"
+          },
+          "title": {
+            "en": "Garden Single",
+            "km": "Garden Single",
+            "zh": "花园单人房"
+          },
+          "description": {
+            "en": "Single rooms, right above the lobby.",
+            "km": "បន្ទប់តែមួយ នៅជាប់ខាងលើ Lobby។",
+            "zh": "位于大堂正上方的单人房。"
+          }
+        },
+        {
+          "label": {
+            "en": "Ground floor",
+            "km": "ជាន់ផ្ទាល់ដី",
+            "zh": "一楼大堂层"
+          },
+          "title": {
+            "en": "Lobby, breakfast room & front desk",
+            "km": "Lobby បន្ទប់អាហារពេលព្រឹក និងកន្លែងទទួលភ្ញៀវ",
+            "zh": "大堂、早餐厅与前台"
+          },
+          "description": {
+            "en": "Check-in, all-day breakfast service, and the main entrance.",
+            "km": "ចុះឈ្មោះចូល សេវាអាហារពេលព្រឹកពេញមួយថ្ងៃ និងច្រកចូលធំ។",
+            "zh": "办理入住、全天早餐服务及正门入口。"
+          }
+        },
+        {
+          "label": {
+            "en": "Street level",
+            "km": "កម្រិតផ្លូវ",
+            "zh": "街道层"
+          },
+          "title": {
+            "en": "Parking",
+            "km": "ចំណតរថយន្ត",
+            "zh": "停车场"
+          },
+          "description": {
+            "en": "Free covered parking for guests, right at the entrance.",
+            "km": "ចំណតរថយន្តមានដំបូលឥតគិតថ្លៃសម្រាប់ភ្ញៀវ នៅជាប់ច្រកចូល។",
+            "zh": "客人可在入口处免费使用带顶棚停车场。"
+          }
+        }
+      ]
+    },
+    "footer": {
+      "tagline": {
+        "en": "A small hotel, honestly run — clean rooms, fair prices, and a booking desk that never sleeps.",
+        "km": "សណ្ឋាគារតូចមួយ ដំណើរការដោយស្មោះត្រង់ — បន្ទប់ស្អាត តម្លៃសមរម្យ និងកន្លែងកក់ដែលមិនដែលដេកលក់។",
+        "zh": "一家诚信经营的小旅馆——客房整洁、价格公道，预订服务全天候在线。"
+      }
+    },
+    "about": {
+      "eyebrow": {
+        "en": "About Kiri Stay",
+        "km": "អំពី Kiri Stay",
+        "zh": "关于Kiri Stay"
+      },
+      "heading": {
+        "en": "A small hotel, run in the open",
+        "km": "សណ្ឋាគារតូចមួយ ដំណើរការដោយបើកចំហ",
+        "zh": "一家透明经营的小旅馆"
+      },
+      "paragraphs": [
+        {
+          "en": "Kiri Stay started as a single guesthouse and grew into four room types and twenty-one units, without ever hiring a call center. This site is our entire front desk: browse rooms, see live availability, and book — the same ledger our staff uses internally, just public-facing.",
+          "km": "Kiri Stay ចាប់ផ្តើមឡើងជាផ្ទះសំណាក់មួយ ហើយបានរីកចម្រើនទៅជាបន្ទប់ ៤ ប្រភេទ សរុប ២១ បន្ទប់ ដោយមិនដែលជួលមជ្ឈមណ្ឌលទូរស័ព្ទឡើយ។ គេហទំព័រនេះគឺជាកន្លែងទទួលភ្ញៀវទាំងមូលរបស់យើង៖ មើលបន្ទប់ ពិនិត្យភាពទំនេរជាក់ស្តែង និងកក់ — ជាបញ្ជីគណនេយ្យដដែលដែលបុគ្គលិកយើងប្រើផ្ទៃក្នុង គ្រាន់តែបង្ហាញជាសាធារណៈ។",
+          "zh": "Kiri Stay 最初只是一家小旅馆，如今已发展为四种客房类型、共21间客房，且从未设立呼叫中心。本网站就是我们完整的前台：浏览客房、查看实时房态并预订——与我们内部使用的登记簿完全相同，只是公开给客人使用。"
+        },
+        {
+          "en": "This project was built as a student capstone demonstrating a full booking flow: authentication, room inventory (CRUD), date-based availability checks, and a role-based admin dashboard.",
+          "km": "គម្រោងនេះត្រូវបានសាងសង់ជាគម្រោងបញ្ចប់ការសិក្សារបស់និស្សិត ដើម្បីបង្ហាញពីលំហូរកក់ពេញលេញ៖ ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ សារពើភ័ណ្ឌបន្ទប់ (CRUD) ការត្រួតពិនិត្យភាពទំនេរតាមកាលបរិច្ឆេទ និងផ្ទាំងគ្រប់គ្រងតាមតួនាទី។",
+          "zh": "本项目作为学生毕业设计，展示了完整的预订流程：身份验证、客房库存管理（增删改查）、按日期查询房态，以及基于角色的管理后台。"
+        }
+      ],
+      "atAGlanceHeading": {
+        "en": "At a glance",
+        "km": "សង្ខេបរួម",
+        "zh": "一览"
+      },
+      "atAGlance": [
+        {
+          "en": "5 floors, one elevator, 4 room types, 21 total units",
+          "km": "ជាន់ ៥ ជណ្តើរយន្តមួយ បន្ទប់ ៤ ប្រភេទ សរុប ២១ បន្ទប់",
+          "zh": "五层楼，一部电梯，四种客房类型，共21间客房"
+        },
+        {
+          "en": "Rooftop pool & bar, ground-floor breakfast, free parking",
+          "km": "អាងហែលទឹក និងបារនៅដំបូល អាហារពេលព្រឹកនៅជាន់ផ្ទាល់ដី ចំណតឥតគិតថ្លៃ",
+          "zh": "屋顶泳池与酒吧，一楼早餐，免费停车"
+        },
+        {
+          "en": "Real-time availability by date range",
+          "km": "ព័ត៌មានទំនេរជាក់ស្តែងតាមចន្លោះកាលបរិច្ឆេទ",
+          "zh": "按日期范围实时查询房态"
+        },
+        {
+          "en": "Customer + Admin accounts",
+          "km": "គណនីភ្ញៀវ និងអ្នកគ្រប់គ្រង",
+          "zh": "客户与管理员账户"
+        },
+        {
+          "en": "Booking history and cancellation",
+          "km": "ប្រវត្តិកក់ និងការលុបចោល",
+          "zh": "预订历史与取消功能"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": {
+        "en": "Get in touch",
+        "km": "ទាក់ទងមកយើង",
+        "zh": "联系我们"
+      },
+      "heading": {
+        "en": "We're easy to reach",
+        "km": "យើងងាយស្រួលទាក់ទង",
+        "zh": "轻松联系我们"
+      },
+      "address": {
+        "en": "123 Harbor Road, Kampot",
+        "km": "១២៣ ផ្លូវហាបើរ ខេត្តកំពត",
+        "zh": "柬埔寨贡布省海港路123号"
+      },
+      "phone": {
+        "en": "+855 12 345 678",
+        "km": "+855 12 345 678",
+        "zh": "+855 12 345 678"
+      },
+      "email": {
+        "en": "front-desk@kiristay.com",
+        "km": "front-desk@kiristay.com",
+        "zh": "front-desk@kiristay.com"
+      },
+      "hours": {
+        "en": "Front desk staffed daily, 7am–11pm. For booking changes, use your dashboard — it's faster than email.",
+        "km": "កន្លែងទទួលភ្ញៀវបើកជានិច្ចរាល់ថ្ងៃ ម៉ោង ៧ ព្រឹក ដល់ ១១ យប់។ សម្រាប់ការផ្លាស់ប្តូរការកក់ សូមប្រើផ្ទាំងគ្រប់គ្រងរបស់អ្នក — លឿនជាងអ៊ីមែល។",
+        "zh": "前台每日7:00至23:00提供服务。如需更改预订，请使用您的账户面板——比发送邮件更快捷。"
+      }
+    }
+  },
+  "messages": [],
+  "settings": {
+    "standardCheckInTime": "2:00 PM"
+  }
+}
