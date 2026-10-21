@@ -219,24 +219,25 @@ function showBookingCard(booking) {
    generate that markup and read it back, used by admin-content.js and
    admin-rooms.js so both share one pattern instead of two.
 --------------------------------------------------------------------- */
-const I18N_ADMIN_LANGS = [['en', 'English'], ['km', 'ខ្មែរ'], ['zh', '中文']];
+const I18N_ADMIN_LANGS = [['en', 'English']];
 
 function i18nRowsHTML(field, values, tag) {
   values = values || {};
   tag = tag || 'input';
   return `<div class="i18n-field">` + I18N_ADMIN_LANGS.map(([code, label]) =>
     tag === 'textarea'
-      ? `<div class="i18n-row"><span class="i18n-tag">${label}</span><textarea class="i18n-input" data-field="${field}" data-lang="${code}" rows="2">${values[code] || ''}</textarea></div>`
-      : `<div class="i18n-row"><span class="i18n-tag">${label}</span><input type="text" class="i18n-input" data-field="${field}" data-lang="${code}" value="${(values[code] || '').replace(/"/g, '&quot;')}" /></div>`
+      ? `<div class="i18n-row"><textarea class="i18n-input" data-field="${field}" data-lang="${code}" rows="2">${values[code] || ''}</textarea></div>`
+      : `<div class="i18n-row"><input type="text" class="i18n-input" data-field="${field}" data-lang="${code}" value="${(values[code] || '').replace(/"/g, '&quot;')}" /></div>`
   ).join('') + `</div>`;
 }
 
 function readI18nField(scopeEl, field) {
   const obj = {};
-  ['en', 'km', 'zh'].forEach((code) => {
+  ['en'].forEach((code) => {
     const el = scopeEl.querySelector(`[data-field="${field}"][data-lang="${code}"]`);
     obj[code] = el ? el.value.trim() : '';
   });
+  obj.km = ''; obj.zh = '';
   return obj;
 }
 
