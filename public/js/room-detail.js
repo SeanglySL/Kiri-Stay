@@ -345,7 +345,7 @@ function renderBookPanel(room) {
   `;
 
   const calContainer = document.getElementById('cal-container');
-  createBookingCalendar(calContainer, {
+  const cal = createBookingCalendar(calContainer, {
     fullDates: CURRENT_ROOM_BOOKED_DATES,
     onChange: (dates) => {
       SELECTED_DATES = dates;
@@ -362,6 +362,8 @@ function renderBookPanel(room) {
     if (!SELECTED_DATES.length) return;
     renderPaymentStep(room, SELECTED_DATES);
   });
+
+  document.addEventListener('kiristay:booked-dates-updated', () => cal.refresh());
 }
 
 let CURRENT_ROOM_BOOKED_DATES = [];
@@ -406,3 +408,15 @@ document.addEventListener('kiristay:lang-changed', () => {
 });
 
 init();
+
+
+// Live refresh: when someone else books dates for this room, update the
+// blocked dates in place — without touching the guest's current selection.
+window.liveRefresh = async function () {
+  if (!roomId || !CURRENT_ROOM) return;
+  try {
+    const data = await API.get('/api/rooms/' + roomId + '/booked-dates');
+    CURRENT_ROOM_BOOKED_DATES.splice(0, CURRENT_ROOM_BOOKED_DATES.length, ...data.fullDates);
+    document.dispatchEvent(new CustomEvent('kiristay:booked-dates-updated'));
+  } catch (e) { /* ignore */ }
+};

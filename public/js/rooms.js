@@ -70,3 +70,13 @@ document.getElementById('filter-form').addEventListener('submit', (e) => {
 document.addEventListener('kiristay:lang-changed', renderRooms);
 
 loadRooms();
+
+
+// Live refresh without the "Loading…" flash.
+window.liveRefresh = async function () {
+  try {
+    const { rooms } = await API.get('/api/rooms');
+    ALL_ROOMS = rooms;
+    renderRooms();
+  } catch (e) { /* keep what is on screen */ }
+};

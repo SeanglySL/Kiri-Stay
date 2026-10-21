@@ -6,7 +6,7 @@
  * and cannot be clicked.
  */
 function createBookingCalendar(container, { fullDates, onChange }) {
-  const fullSet = new Set(fullDates || []);
+  let fullSet = new Set(fullDates || []);
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -109,5 +109,12 @@ function createBookingCalendar(container, { fullDates, onChange }) {
   render();
   return {
     reset() { selected.clear(); render(); },
+    // Called when someone else books days while this guest is looking:
+    // re-read the blocked days, and drop any picked day that just got taken.
+    refresh() {
+      fullSet = new Set(fullDates || []);
+      [...selected].forEach((iso) => { if (fullSet.has(iso)) selected.delete(iso); });
+      if (container.isConnected) render();
+    },
   };
 }

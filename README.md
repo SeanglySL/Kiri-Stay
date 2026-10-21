@@ -412,3 +412,17 @@ whenever you want to reset.
 - Swapping `data/db.json` for Supabase/MySQL for true multi-user
   concurrency (the current JSON-file store is fine for a demo but not
   for production traffic)
+
+## Permanent, shared data (Firebase)
+
+By default data lives in `data/db.json`, which is fine on your own computer but is **wiped on free hosts such as Render**. To keep data permanently and let everyone see the same live data, connect a free Firebase project:
+
+1. console.firebase.google.com → **Add project** (Analytics not needed).
+2. **Build → Realtime Database → Create Database** → location **Singapore** → start in **locked mode** (keep it locked; only the server may access it).
+3. Copy the database URL shown at the top (e.g. `https://xxxx-default-rtdb.asia-southeast1.firebasedatabase.app`).
+4. **Project settings (gear) → Service accounts → Generate new private key** → a `.json` file downloads. Never commit it to GitHub.
+5. In Render → your service → **Environment**, add:
+   - `FIREBASE_DATABASE_URL` = the database URL
+   - `FIREBASE_SERVICE_ACCOUNT` = the **entire contents** of the downloaded `.json` file
+
+On first start the server copies the starter data into Firebase; from then on every change is saved there (room photos too) and pushed live to every open browser (Server-Sent Events at `/api/events`). If the two variables are missing the app keeps using `data/db.json`.

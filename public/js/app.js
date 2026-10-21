@@ -283,3 +283,58 @@ document.addEventListener('DOMContentLoaded', () => {
     side.scrollLeft = Math.max(0, active.offsetLeft - 16);
   }
 });
+
+/* ---------------------------------------------------------------------
+   Live updates. The server pushes a tiny "something changed" message
+   whenever anyone saves data; every open page then refreshes its own
+   data. It waits if the person is typing or a pop-up is open, so nobody
+   loses what they're working on.
+--------------------------------------------------------------------- */
+(function setupLiveUpdates() {
+  if (!window.EventSource) return;
+  const path = location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
+  // Which function redraws each page. Functions are looked up when needed,
+  // because the page's own script loads after this one.
+  const REFRESHERS = {
+    '/': 'loadFeatured', '/index.html': 'loadFeatured',
+    '/rooms.html': 'liveRefresh', '/room-detail.html': 'liveRefresh',
+    '/dashboard.html': 'loadBookings',
+    '/admin': 'load', '/admin/users.html': 'load', '/admin/bookings.html': 'load',
+    '/admin/rooms.html': 'loadRooms', '/admin/messages.html': 'loadMessages',
+    '/admin/analytics.html': 'liveRefresh',
+  };
+  const fnName = REFRESHERS[path] || REFRESHERS[location.pathname];
+
+  function busy() {
+    if (document.querySelector('.card-modal-overlay')) return true;
+    const a = document.activeElement;
+    if (a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)) return true;
+    return false;
+  }
+
+  let timer = null, waiting = false;
+  function refreshNow() {
+    if (busy()) { waiting = true; return; }
+    waiting = false;
+    document.dispatchEvent(new CustomEvent('kiristay:data-changed'));
+    if (typeof window.refreshAdminBell === 'function') window.refreshAdminBell();
+    const fn = fnName && window[fnName];
+    if (typeof fn === 'function') fn();
+  }
+  // If we skipped a refresh because someone was typing, catch up afterwards.
+  setInterval(() => { if (waiting && !busy()) refreshNow(); }, 2000);
+
+  let source;
+  function connect() {
+    source = new EventSource('/api/events');
+    source.onmessage = () => {
+      clearTimeout(timer);
+      timer = setTimeout(refreshNow, 400);
+    };
+    // EventSource reconnects by itself after a drop; refresh once it's back
+    // so nothing that changed in the gap is missed.
+    let opened = false;
+    source.onopen = () => { if (opened) refreshNow(); opened = true; };
+  }
+  connect();
+})();

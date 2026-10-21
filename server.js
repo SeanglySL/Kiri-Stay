@@ -31,13 +31,142 @@ fs.mkdirSync(IMAGES_DIR, { recursive: true });
 /* Tiny JSON "database"                                               */
 /* ------------------------------------------------------------------ */
 
+/*
+ * Storage modes
+ *  - Local file (default): data/db.json. Fine on your own computer.
+ *  - Cloud (set FIREBASE_DATABASE_URL + FIREBASE_SERVICE_ACCOUNT): the same
+ *    JSON document is kept in Firebase Realtime Database so it survives
+ *    restarts/redeploys on free hosts like Render, whose disk is wiped.
+ *    The server keeps a copy in memory (fast, synchronous reads) and writes
+ *    every change through to Firebase. No Firebase SDK needed: it talks to
+ *    Firebase's REST API with a signed service-account token.
+ */
+const FIREBASE_URL = (process.env.FIREBASE_DATABASE_URL || '').replace(/\/+$/, '');
+let FIREBASE_ACCOUNT = null;
+if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+  try { FIREBASE_ACCOUNT = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT); }
+  catch (e) { console.error('FIREBASE_SERVICE_ACCOUNT is not valid JSON — paste the whole key file contents.'); process.exit(1); }
+}
+const CLOUD = Boolean(FIREBASE_URL && FIREBASE_ACCOUNT);
+const FIREBASE_TOKEN_URL = process.env.FIREBASE_TOKEN_URL || 'https://oauth2.googleapis.com/token';
+
+let fbToken = null;
+let fbTokenExpires = 0;
+async function firebaseToken() {
+  if (fbToken && Date.now() < fbTokenExpires - 5 * 60 * 1000) return fbToken;
+  const b64 = (o) => Buffer.from(JSON.stringify(o)).toString('base64url');
+  const now = Math.floor(Date.now() / 1000);
+  const unsigned = b64({ alg: 'RS256', typ: 'JWT' }) + '.' + b64({
+    iss: FIREBASE_ACCOUNT.client_email,
+    scope: 'https://www.googleapis.com/auth/firebase.database https://www.googleapis.com/auth/userinfo.email',
+    aud: FIREBASE_TOKEN_URL,
+    iat: now,
+    exp: now + 3600,
+  });
+  const signature = crypto.createSign('RSA-SHA256').update(unsigned).sign(FIREBASE_ACCOUNT.private_key).toString('base64url');
+  const r = await fetch(FIREBASE_TOKEN_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer', assertion: unsigned + '.' + signature }),
+  });
+  if (!r.ok) throw new Error(`Firebase sign-in failed (${r.status}): ${await r.text()}`);
+  const j = await r.json();
+  fbToken = j.access_token;
+  fbTokenExpires = Date.now() + (j.expires_in || 3600) * 1000;
+  return fbToken;
+}
+
+async function fbRequest(method, nodePath, body) {
+  const token = await firebaseToken();
+  const r = await fetch(`${FIREBASE_URL}/${nodePath}.json`, {
+    method,
+    headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  if (!r.ok) throw new Error(`Firebase ${method} ${nodePath} failed (${r.status}): ${await r.text()}`);
+  return r.json();
+}
+
+let dbText = null;          // current database as a JSON string (source of truth in memory)
+let syncing = false;
+let syncAgain = false;
+
 function readDB() {
-  const raw = fs.readFileSync(DB_PATH, 'utf-8');
-  return JSON.parse(raw);
+  if (dbText === null) dbText = fs.readFileSync(DB_PATH, 'utf-8');
+  return JSON.parse(dbText);   // fresh copy each time, so a failed request can't leave half-edited data behind
 }
 
 function writeDB(db) {
-  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), 'utf-8');
+  dbText = JSON.stringify(db, null, 2);
+  if (CLOUD) {
+    scheduleCloudSave();
+  } else {
+    fs.writeFileSync(DB_PATH, dbText, 'utf-8');
+  }
+  broadcastChange();
+}
+
+// The whole database is stored as one text value, so Firebase can't
+// reshape it (it would otherwise drop empty lists and rewrite arrays).
+async function cloudLoad() {
+  const node = await fbRequest('GET', 'kiristay');
+  return node && typeof node.data === 'string' ? node.data : null;
+}
+
+async function cloudSaveNow() {
+  await fbRequest('PUT', 'kiristay', { data: dbText, updatedAt: new Date().toISOString() });
+}
+
+// Saves are queued one at a time; if more changes arrive while one is in
+// flight, only the newest snapshot is sent next (nothing is lost).
+async function scheduleCloudSave() {
+  if (syncing) { syncAgain = true; return; }
+  syncing = true;
+  try {
+    do {
+      syncAgain = false;
+      for (let attempt = 1; attempt <= 4; attempt++) {
+        try { await cloudSaveNow(); break; }
+        catch (err) {
+          console.error('Cloud save problem:', err.message);
+          if (attempt === 4) { syncAgain = false; break; }
+          await new Promise((r) => setTimeout(r, 800 * attempt));
+        }
+      }
+    } while (syncAgain);
+  } finally {
+    syncing = false;
+  }
+}
+
+async function initStorage() {
+  if (!CLOUD) {
+    console.log('Storage: local file (data/db.json)');
+    return;
+  }
+  const remote = await cloudLoad();
+  if (remote !== null) {
+    dbText = remote;
+    console.log('Storage: Firebase (loaded existing data)');
+  } else {
+    dbText = fs.readFileSync(DB_PATH, 'utf-8');   // first run: seed the cloud from the bundled starter data
+    await cloudSaveNow();
+    console.log('Storage: Firebase (first run, seeded starter data)');
+  }
+}
+
+/* ---- Live updates (Server-Sent Events) ----
+ * Browsers keep one open connection to /api/events. Whenever anything is
+ * saved, every connected browser is told, and refreshes its own view. */
+const sseClients = new Set();
+const IMAGE_CACHE = new Map();
+let broadcastTimer = null;
+function broadcastChange() {
+  if (broadcastTimer) return;
+  broadcastTimer = setTimeout(() => {
+    broadcastTimer = null;
+    for (const res of sseClients) res.write(`data: ${Date.now()}\n\n`);
+  }, 150);
 }
 
 function nextId(items) {
@@ -283,6 +412,17 @@ route('POST', '/api/uploads', async (req, res) => {
   }
 
   const filename = `${Date.now()}-${crypto.randomBytes(5).toString('hex')}${ext}`;
+  if (CLOUD) {
+    // Photos are kept in Firebase too (as text), so they survive restarts.
+    const id = filename.replace(/\.[^.]+$/, '');
+    try {
+      await fbRequest('PUT', 'images/' + id, { mime, data: buffer.toString('base64') });
+    } catch (err) {
+      console.error('Image upload failed:', err.message);
+      return sendJSON(res, 502, { error: 'Could not store the image. Please try again.' });
+    }
+    return sendJSON(res, 201, { url: `/cloud-images/${id}` });
+  }
   fs.writeFileSync(path.join(IMAGES_DIR, filename), buffer);
   sendJSON(res, 201, { url: `/images/${filename}` });
 });
@@ -729,6 +869,40 @@ const server = http.createServer(async (req, res) => {
   const parsed = new URL(req.url, `http://${req.headers.host}`);
   const pathname = parsed.pathname;
 
+  if (pathname.startsWith('/cloud-images/') && CLOUD) {
+    const id = pathname.slice('/cloud-images/'.length);
+    if (!/^[\w-]+$/.test(id)) { res.writeHead(404); return res.end('Not found'); }
+    try {
+      let img = IMAGE_CACHE.get(id);
+      if (!img) {
+        const node = await fbRequest('GET', 'images/' + id);
+        if (!node || !node.data) { res.writeHead(404); return res.end('Not found'); }
+        img = { mime: node.mime, buffer: Buffer.from(node.data, 'base64') };
+        if (IMAGE_CACHE.size > 40) IMAGE_CACHE.delete(IMAGE_CACHE.keys().next().value);
+        IMAGE_CACHE.set(id, img);
+      }
+      res.writeHead(200, { 'Content-Type': img.mime, 'Cache-Control': 'public, max-age=31536000, immutable' });
+      return res.end(img.buffer);
+    } catch (err) {
+      console.error(err.message);
+      res.writeHead(502); return res.end('Image unavailable');
+    }
+  }
+
+  if (pathname === '/api/events') {
+    res.writeHead(200, {
+      'Content-Type': 'text/event-stream',
+      'Cache-Control': 'no-cache, no-transform',
+      Connection: 'keep-alive',
+      'X-Accel-Buffering': 'no',
+    });
+    res.write('retry: 3000\n\n');
+    sseClients.add(res);
+    const ping = setInterval(() => res.write(': ping\n\n'), 25000);
+    req.on('close', () => { clearInterval(ping); sseClients.delete(res); });
+    return;
+  }
+
   if (pathname.startsWith('/api/')) {
     const match = matchRoute(req.method, pathname);
     if (!match) return sendJSON(res, 404, { error: 'Unknown API route.' });
@@ -747,7 +921,13 @@ const server = http.createServer(async (req, res) => {
   serveStatic(req, res, pathname);
 });
 
-server.listen(PORT, '0.0.0.0', () => {
-  console.log(`Kiri Stay hotel booking server running at http://localhost:${PORT}`);
-  console.log(`Admin login -> email: admin@kiristay.com  password: admin123`);
+initStorage().then(() => {
+  server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Kiri Stay hotel booking server running at http://localhost:${PORT}`);
+    console.log(`Admin login -> email: admin@kiristay.com  password: admin123`);
+  });
+}).catch((err) => {
+  // Refuse to start rather than run on stale data and overwrite the real database.
+  console.error('Could not connect to the cloud database:', err.message);
+  process.exit(1);
 });

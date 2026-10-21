@@ -338,3 +338,13 @@ document.addEventListener('kiristay:auth-ready', (e) => {
   if (!guardAdmin_(e.detail.user)) return;
   init();
 });
+
+
+// Live refresh: re-read bookings and redraw the charts for the chosen range.
+window.liveRefresh = async function () {
+  try {
+    const { bookings } = await API.get('/api/bookings');
+    ALL_BOOKINGS = bookings;
+    renderAll();
+  } catch (e) { /* keep showing what we have */ }
+};
