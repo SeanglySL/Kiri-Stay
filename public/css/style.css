@@ -855,12 +855,6 @@ tbody tr:hover { background: rgba(184,135,75,0.05); }
   color: rgba(250,247,241,0.4);
 }
 .dash-main { padding: 40px 40px 80px; }
-@media (max-width: 760px) {
-  .dash-shell { grid-template-columns: 1fr; }
-  .dash-side { display: flex; overflow-x: auto; padding: 10px; }
-  .dash-side a { padding: 10px 16px; border-left: none; border-bottom: 3px solid transparent; white-space: nowrap; }
-  .dash-side a.active { border-left-color: transparent; border-bottom-color: var(--brass); }
-}
 
 .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px,1fr)); gap: 18px; margin-bottom: 34px; }
 .stat-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
@@ -1203,4 +1197,95 @@ tbody tr:hover { background: rgba(184,135,75,0.05); }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
+}
+
+
+/* =====================================================================
+   Mobile layout for admin + customer dashboards (phones, <= 760px)
+   - header compacts to one tidy row
+   - side menu becomes a sticky, swipeable pill bar (fixed height)
+   - tables turn into stacked cards (labels come from data-label)
+   - nothing may make the page scroll sideways
+===================================================================== */
+@media (max-width: 760px) {
+  html, body { overflow-x: hidden; }
+
+  .site-header .container { height: 60px; padding: 0 16px; gap: 10px; }
+  .brand { font-size: 1.15rem; white-space: nowrap; }
+  .nav-auth { gap: 8px; min-width: 0; }
+  .nav-auth .muted { display: none; }               /* "Admin: name" text */
+  .nav-auth .btn-sm { padding: 0.5em 0.9em; white-space: nowrap; }
+
+  .dash-shell { display: block; min-height: 0; }
+  .dash-side {
+    position: sticky; top: 60px; z-index: 30;
+    display: flex; align-items: center; gap: 8px;
+    height: auto; padding: 10px 12px;
+    overflow-x: auto; overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    box-shadow: 0 6px 14px -8px rgba(27,36,48,0.5);
+  }
+  .dash-side::-webkit-scrollbar { display: none; }
+  .dash-side a {
+    flex: 0 0 auto; padding: 9px 16px; border: 1px solid rgba(250,247,241,0.18);
+    border-radius: 999px; font-size: 0.85rem; white-space: nowrap;
+  }
+  .dash-side a.active {
+    background: var(--brass); border-color: var(--brass); color: var(--ink); font-weight: 600;
+  }
+  .dash-side-label {
+    flex: 0 0 auto; padding: 0 4px 0 10px; margin-left: 4px;
+    border-left: 1px solid rgba(250,247,241,0.25); white-space: nowrap;
+  }
+
+  .dash-main { padding: 22px 16px 60px; min-width: 0; }
+  .dash-main h1 { font-size: 1.7rem; }
+  .flex-between { flex-wrap: wrap; gap: 12px; }
+  .flex-between .btn { width: 100%; }
+
+  .panel { padding: 18px 16px; }
+  .grid-2 { gap: 18px; }
+  .stat-row { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+  .stat-card { padding: 14px; }
+  .stat-card .num { font-size: 1.35rem; }
+
+  /* inputs: big enough to tap, and 16px so iOS doesn't zoom */
+  input, select, textarea { font-size: 16px; }
+  .btn { min-height: 42px; }
+  canvas { max-width: 100%; height: auto !important; }
+
+  /* ---- tables -> cards ---- */
+  .table-wrap { background: none; border: none; overflow: visible; }
+  .table-wrap table, .table-wrap tbody { display: block; min-width: 0; width: 100%; }
+  .table-wrap thead { display: none; }
+  .table-wrap tr {
+    display: block; background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 6px 14px; margin-bottom: 12px;
+  }
+  .table-wrap tbody tr:hover { background: var(--paper); }
+  .table-wrap td {
+    display: flex; justify-content: space-between; align-items: center; gap: 14px;
+    padding: 9px 0; border-bottom: 1px dashed var(--line-soft);
+    text-align: right; word-break: break-word;
+  }
+  .table-wrap td:last-child { border-bottom: none; }
+  .table-wrap td::before {
+    content: attr(data-label); flex: 0 0 38%; text-align: left;
+    font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--brass-dark);
+  }
+  .table-wrap td[data-label=""]::before { display: none; }
+  .table-wrap td[data-label=""] { justify-content: stretch; flex-wrap: wrap; }
+  .table-wrap td .btn { flex: 1 1 auto; }
+
+  /* modals / ID card fit small screens */
+  .card-modal-overlay { padding: 14px; align-items: flex-start; overflow-y: auto; }
+  .card-modal { margin: 20px auto; }
+  .card-modal-close { top: -10px; right: -6px; }
+  .donut-tooltip { display: none; }
+
+  .range-dates { display: grid !important; grid-template-columns: auto 1fr; gap: 8px 10px; width: 100%; }
+  .range-dates input { min-width: 0; width: 100%; }
+  .range-presets { display: grid !important; grid-template-columns: 1fr 1fr; width: 100%; gap: 8px; }
+  .range-presets .btn { width: 100%; }
 }

@@ -250,3 +250,36 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.dispatchEvent(new CustomEvent('kiristay:auth-ready', { detail: { user } }));
   document.dispatchEvent(new CustomEvent('kiristay:content-ready', { detail: { content: SITE_CONTENT } }));
 });
+
+
+/* Mobile tables: copy each column header into its cells as data-label so
+   the CSS can show them as stacked "label: value" cards on phones. Tables
+   are drawn by JS after load, so a MutationObserver keeps this up to date. */
+function labelTableCells() {
+  document.querySelectorAll('.table-wrap table').forEach((table) => {
+    const heads = Array.from(table.querySelectorAll('thead th')).map((th) => th.textContent.trim());
+    table.querySelectorAll('tbody tr').forEach((tr) => {
+      Array.from(tr.children).forEach((td, i) => {
+        if (td.tagName === 'TD' && !td.hasAttribute('data-label')) td.setAttribute('data-label', heads[i] || '');
+      });
+    });
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  labelTableCells();
+  let pending = false;
+  new MutationObserver(() => {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(() => { pending = false; labelTableCells(); });
+  }).observe(document.body, { childList: true, subtree: true });
+});
+
+// On phones the side menu scrolls sideways; bring the current page's pill into view.
+document.addEventListener('DOMContentLoaded', () => {
+  const active = document.querySelector('.dash-side a.active');
+  if (active && active.scrollIntoView) {
+    const side = active.parentElement;
+    side.scrollLeft = Math.max(0, active.offsetLeft - 16);
+  }
+});
